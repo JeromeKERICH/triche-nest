@@ -1,0 +1,192 @@
+
+  .qa-section {
+    padding: 100px 10%;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+  }
+  
+  .qa-section h2,.qa-section h3 
+  {
+    font-size: 2.5rem;
+    color: #1c3f60;
+    margin-bottom: 20px;
+  }
+  
+  .qa-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .qa-section h4 {
+    font-size: 1.5rem;
+    color: #607D8B;
+    margin-bottom: 20px;
+  }
+  
+  /* Buttons */
+  .buy-btn,
+  .whatsapp-btn,
+  .submit-btn {
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .buy-btn {
+    background-color: #007bff; 
+  }
+  
+  .buy-btn:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05); 
+  }
+  
+  .buy-btn:active {
+    transform: scale(1); 
+  }
+  
+  
+  .whatsapp-btn {
+    background-color: #25D366; 
+  }
+  
+  .whatsapp-btn:hover {
+    background-color: #128C7E; 
+  }
+  
+  .whatsapp-btn:active {
+    background-color: #075E54; 
+  }
+  
+  /* Form Styling */
+  .qa-form {
+    margin-top: 30px;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .qa-form label {
+    font-size: 1rem;
+    color: #333;
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .qa-form input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #f1f1f1;
+  }
+  
+  .qa-form input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .submit-btn {
+    background-color: #007bff;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .submit-btn:active {
+    background-color: #003f7f;
+  }
+  
+  @media (max-width: 768px) {
+    
+    .qa-section {
+      padding-top: 20%;
+    }
+  
+    .qa-section h2,
+    .qa-section h3 {
+      font-size: 2rem;
+    }
+  
+    .qa-section p {
+      font-size: 1rem;
+      text-align: start;
+    }
+  
+    .qa-section h4 {
+      font-size: 1.2rem;
+    }
+  
+    .buy-btn,
+    .whatsapp-btn {
+      padding: 10px 25px;
+      font-size: 1rem;
+    }
+  
+    .qa-form {
+      padding: 15px;
+    }
+  
+    .qa-form input,
+    .submit-btn {
+      padding: 10px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Adjustments for very small screens */
+    .qa-section h2,
+    .qa-section h3 {
+      font-size: 1.5rem;
+    }
+  
+    .qa-section p {
+      font-size: 0.9rem;
+    }
+  
+    .qa-section h4 {
+      font-size: 1rem;
+    }
+  
+    .buy-btn,
+    .whatsapp-btn {
+      padding: 8px 20px;
+      font-size: 0.9rem;
+    }
+  
+    .qa-form input,
+    .submit-btn {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  }
+  
