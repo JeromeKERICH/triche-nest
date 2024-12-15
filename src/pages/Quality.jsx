@@ -33,48 +33,43 @@ function QualityAssurance() {
         Talk with us on WhatsApp
       </a>
 
-      <div className="form-container">
-        <h3>Submit Your Website for Quality Assurance</h3>
-        <form onSubmit={handleSubmit} className="qa-form">
-          <div className="form-group">
-            <label htmlFor="name">Your Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
+      <section className="qa-form">
+        <h2>Submit Your Website for Quality Assurance</h2>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Full Name:
+            <input 
+              type="text" 
+              name="name" 
+              value={formData.name} 
+              onChange={handleChange} 
+              required 
             />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="email">Your Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
+          </label>
+          <label>
+            Email Address:
+            <input 
+              type="email" 
+              name="email" 
+              value={formData.email} 
+              onChange={handleChange} 
+              required 
             />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="website">Your Website URL:</label>
-            <input
-              type="url"
-              id="website"
-              name="website"
-              value={formData.website}
-              onChange={handleChange}
-              required
+          </label>
+          <label>
+            Website URL:
+            <input 
+              type="url" 
+              name="websiteUrl" 
+              value={formData.websiteUrl} 
+              onChange={handleChange} 
+              required 
             />
-          </div>
-
-          <button type="submit" className="submit-btn">Submit Your Website</button>
+          </label>
+          <button type="submit" className="submit-button">Submit</button>
         </form>
-      </div>
+      </section>
+    
     </div>
   );
 }

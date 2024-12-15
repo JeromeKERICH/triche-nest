@@ -3,20 +3,20 @@ import '../styles/components/Hero.css';
 
 const heroData = [
   {
-    image: "/assets/web.png",
+    image: "/assets/3.png",
     title: 'Transform Your Vision into a Stunning, High-Performing Website',
     ctaText: 'Register Here',
     link: "https://example.com/web", 
   },
   {
-    image: "/assets/seo.png",
+    image: "/assets/appo.png",
     title: 'Engage, Inspire, and Convert with Powerful Content That Speaks to Your Audience',
     ctaText: 'Book A Session',
     link: "https://calendly.com/trichenest/30min", 
   },
   {
-    image: "/assets/content.png",
-    title: 'Boost Your Visibility & Drive Traffic with Proven SEO Strategies',
+    image: "/assets/connect.png",
+    title: 'Enhance Your Visibility and Build Connections with Like-Minded Individuals',
     ctaText: 'Join Our Community',
     link: "https://whatsapp.com/channel/0029VaulQVgK0IBpjNpENJ1I", 
   },

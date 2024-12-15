@@ -6,10 +6,10 @@ import 'swiper/css/pagination';
 import '../styles/components/Projects.css';
 
 const projects = [
-  { id: 1, image: '/assets/thriving.png', title: 'Thriving Moms Space', description: 'This is a description of project one.' },
-  { id: 2, image: '/assets/abthan.png', title: 'Abthan Technologies', description: 'This is a description of project two.' },
-  { id: 3, image: '/assets/abthan.png', title: 'Project Three', description: 'This is a description of project three.' },
-  { id: 4, image: '/assets/abthan.png', title: 'Project Four', description: 'This is a description of project four.' },
+  { id: 2, image: '/assets/abth.jpg', title: 'Abthan Technologies', description: 'Internt Service Provider.' },
+  { id: 1, image: '/assets/thri.jpg', title: 'Thriving Moms Space', description: 'Empowering Motherhod Journey.' },
+  { id: 3, image: '/assets/high.jpg', title: 'HTC Hotel', description: 'Learn, Unwind & Have Fun' },
+  { id: 4, image: '/assets/book.png', title: 'Book Jerome App', description: 'Booking App (Ongoing)' },
 ];
 
 const Projects = () => {

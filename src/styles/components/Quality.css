@@ -6,6 +6,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin: 20px;
+    margin-bottom: 0;
   }
   
   .qa-section h2,.qa-section h3 
@@ -70,65 +71,71 @@
   }
   
   /* Form Styling */
+  
   .qa-form {
-    margin-top: 30px;
-    text-align: left;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 20px 10px;
+    margin-top: 10px;
+    
+  }
+  
+  .qa-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1c3f60;
+  }
+  
+  .qa-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
   
   .qa-form label {
+    margin-bottom: 10px;
     font-size: 1rem;
-    color: #333;
-    display: block;
-    margin: 10px 0 5px;
+    text-align: left;
+    width: 60%;
   }
   
   .qa-form input {
+    padding: 10px;
     width: 100%;
-    padding: 12px;
     font-size: 1rem;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 15px;
-    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
   }
   
   .qa-form input:focus {
     border-color: #007bff;
-    outline: none;
   }
   
-  .submit-btn {
+  .submit-button {
+    padding: 12px 30px;
     background-color: #007bff;
-    width: 100%;
-    padding: 12px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 5px;
     color: white;
-    cursor: pointer;
+    font-size: 1.1rem;
     border: none;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
-  .submit-btn:hover {
+  .submit-button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
   }
   
-  .submit-btn:active {
-    background-color: #003f7f;
-  }
   
   @media (max-width: 768px) {
     
     .qa-section {
       padding-top: 20%;
+      padding-left: 4%;
+      padding-right: 4%;
     }
   
     .qa-section h2,
@@ -147,12 +154,17 @@
   
     .buy-btn,
     .whatsapp-btn {
-      padding: 10px 25px;
+      padding: 10px 20px;
       font-size: 1rem;
+      width: 70%;
     }
   
     .qa-form {
       padding: 15px;
+    }
+
+    .qa-form label {
+      width: 100%;
     }
   
     .qa-form input,
@@ -187,6 +199,11 @@
     .submit-btn {
       padding: 8px;
       font-size: 0.9rem;
+    }
+
+    .qa-form h2 {
+      font-size: 1rem;
+      
     }
   }
   

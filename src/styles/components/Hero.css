@@ -48,7 +48,7 @@
     align-items: flex-start;
     padding: 2rem;
     text-align: left;
-    transition: opacity 0.5s ease, width 0.5s ease, padding 0.5s ease; /* Added transition for padding and width */
+    transition: opacity 0.5s ease, width 0.5s ease, padding 0.5s ease; 
   }
   
   .cta-button {
@@ -60,7 +60,7 @@
     cursor: pointer;
     color: #fff;
     font-size: 1rem;
-    transition: background-color 0.3s ease, padding 0.3s ease; /* Transition button padding and background */
+    transition: background-color 0.3s ease, padding 0.3s ease; 
   }
   
   .cta-button:hover {
@@ -78,6 +78,9 @@
   
   /* For larger screens */
   @media (max-width: 950px) {
+    .hero {
+      margin-bottom: 30px;
+    }
     .hero-content {
         flex-direction: column;
         padding-left: 2%;
@@ -97,8 +100,12 @@
         width: 100%;
         text-align: center;
         padding: 0.5rem;
+        
     }
-  
+    .hero-text h1 {
+      font-size: 18px;
+      font-weight: 400;
+    }
     .arrow-button {
         display: none;
     }
@@ -111,6 +118,10 @@
   
   /* For small screens */
   @media (max-width: 768px) {
+
+    .hero {
+      margin-bottom: 20px;
+    }
     .hero-content {
         flex-direction: column;
         padding: 0;

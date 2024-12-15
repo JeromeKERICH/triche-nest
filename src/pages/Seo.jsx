@@ -64,7 +64,7 @@ function Seo() {
           </div>
         </div>
 
-        <div className="cta-buttons">
+        <div className="cta-butt">
           <a href="/buy-now" className="buy-now-button">Buy Now</a>
           <a href="https://wa.me/254788120422" target="_blank" className="whatsapp-button">Talk with us on WhatsApp</a>
         </div>

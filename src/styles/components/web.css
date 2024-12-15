@@ -60,7 +60,7 @@
   
   
   .buy-now, .whatsapp-btn {
-    background-color: #28a745;
+    background-color: #045216;
     color: #fff;
     font-size: 1rem;
     padding: 10px 20px;
@@ -105,8 +105,7 @@
     margin-bottom: 20px;
     color: #444;
   }
-  
- 
+
   
   /* Mobile Styles */
   @media (max-width: 768px) {
@@ -114,13 +113,13 @@
     .services-container {
         padding-top: 20%;
     }
-    .service-card {
+    .services-card {
       width: 45%; 
      
       
     }
   
-    .services-container {
+    .servicess-container {
       justify-content: center;
     }
   
@@ -136,7 +135,7 @@
   
  
   @media (max-width: 480px) {
-    .service-card {
+    .services-card {
       width: 90%; 
       margin-bottom: 5px;
     }
