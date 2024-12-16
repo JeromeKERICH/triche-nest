@@ -82,10 +82,10 @@ const CareerDevelopmentPage = () => {
 
   return (
     <div className="career-development-page">
-      <h1>Career Development Services</h1>
+      <h1>Career Growth Solutions</h1>
       <p>Choose from our various career development services designed to help you achieve your career goals. Whether it's resume review or career consulting, we offer tailored services to help you succeed in your professional journey.</p>
 
-      <h2>Select Your Services</h2>
+      <h2>Select a Package</h2>
       <div className="available-services">
         {services.map((service) => (
           <div key={service.id} className="service-card">

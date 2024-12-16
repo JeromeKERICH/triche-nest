@@ -1,0 +1,251 @@
+
+  
+  /* Hero Section */
+  .heros {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/34.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+  
+  .heros h1 {
+    margin-top: 20px;
+    color: goldenrod;
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  
+  .heros p {
+    color: white;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  
+  /* Info Section */
+  .infos-section {
+    background-color: #ffffff;
+    padding: 20px 10%;
+    text-align: center;
+  }
+  
+  .infos-section h2 {
+    margin-bottom: 20px;
+    color: #003366;
+    font-size: 2rem;
+  }
+  
+  .infos-section p {
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+    color: #666;
+  }
+  
+  .vip-button {
+    background-color: green;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  
+  /* Form Section */
+  .forms-section {
+    background-color: #ffffff;
+    padding: 20px 10%;
+    text-align: center;
+  }
+
+  .forms-section h2 {
+    color: #003366;
+    font-size: 2rem;
+  }
+  
+  .forms-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .forms-container input,
+  .forms-container select,
+  .forms-container textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .forms-container button {
+    background-color: green;
+    color: white;
+    width: 50%;
+    padding: 8px 115px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .forms-section h3 {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    text-align: center;
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin: 10px 0;
+  }
+  
+  /* Community Section */
+  .community-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #003366;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .community-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .community-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .community-section .vip-button {
+    background-color: #ffffff;
+    color: #003366;
+  }
+  
+  .community-section .vip-button:hover {
+    background-color: #0066cc;
+    color: white;
+  }
+  
+  
+  
+  @media(max-width: 768px) {
+    /* Hero Section */
+    .heros {
+      padding: 40px 20px;
+    }
+  
+    .heros h1 {
+      font-size: 28px;
+      margin-top: 60px;
+    }
+  
+    .heros p {
+      font-size: 16px;
+      
+    }
+  
+    /* Info Section */
+    .infos-section h2 {
+      font-size: 1.5rem;
+    }
+
+    .infos-section p {
+        text-align: start;
+    }
+
+    .vip-button {
+        padding: 8px 10px;
+    }
+  
+    /* Form Section */
+    .forms-container {
+      grid-template-columns: 1fr;
+    }
+
+    .forms-section h2 {
+        font-size: 1.5rem;
+    }
+  
+    .forms-container input,
+    .forms-container select,
+    .forms-container textarea {
+      font-size: 14px;
+    }
+  
+    .forms-container button {
+      font-size: 16px;
+      width: 100%;
+    }
+  
+    /* Community Section */
+
+    .community-section {
+        padding: 20px 10px;
+    }
+    .community-section h2 {
+        margin-bottom: 0;
+      font-size: 28px;
+    }
+
+    .forms-section h3 {
+        font-size: 1.5rem;
+    }
+  
+}  
+  
+  @media(max-width: 480px) {
+    .heros {
+      background-position: center;
+      padding: 30px 10px;
+    }
+  
+    .heros h1 {
+      font-size: 24px;
+    }
+  
+    .heros p {
+      font-size: 14px;
+    }
+  
+    .infos-section h2 {
+      font-size: 24px;
+    }
+  
+    .forms-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .forms-container input,
+    .forms-container select,
+    .forms-container textarea {
+      font-size: 14px;
+    }
+  
+    .forms-container button {
+      font-size: 16px;
+    }
+  
+    .community-section h2 {
+      font-size: 24px;
+    }
+  
+    
+  }
+  

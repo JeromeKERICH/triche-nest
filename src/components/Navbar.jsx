@@ -30,12 +30,16 @@ const Navbar = () => {
           <i className="fab fa-whatsapp"></i>
         </a>
 
+        <a href="/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-tiktok"></i>
+        </a>
+
       </div>
 
       {/* Desktop Navigation Links */}
       <ul className="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="/business">Business</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a href="/about">About Us</a></li>
         
@@ -56,12 +60,12 @@ const Navbar = () => {
           <i className="fas fa-user"></i>
           <span className="nav-text">About</span>
         </a>
-        <a href="#services" className="nav-item">
-          <i className="fas fa-cogs"></i>
-          <span className="nav-text">Services</span>
+        <a href="/business" className="nav-item">
+          <i className="fas fa-briefcase"></i>
+          <span className="nav-text">Business</span>
         </a>
         <a href="/courses" className="nav-item">
-          <i className="fas fa-graduation-cap"></i>
+          <i className="fas fa-feather-alt"></i>
           <span className="nav-text">Blog</span>
         </a>
         <a href="/contact" className="nav-item" onClick={toggleIcons}>

@@ -26,15 +26,15 @@ function Seo() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>SEO Services</h1>
+        <h1>Drive Traffice, Increase Leads</h1>
         <p>Boost your online visibility and rank higher on search engines</p>
       </header>
 
       <section className="seo-details">
-        <h2>Why Choose Our SEO Services?</h2>
+        <h2>Your Go-To SEO Experts</h2>
         <p>SEO (Search Engine Optimization) is the key to improving your website's visibility and attracting organic traffic. Our team specializes in enhancing your online presence and helping you rank higher on search engines like Google, Yahoo, and Bing.</p>
 
-        <h3>Our SEO Services Include:</h3>
+        <h3>Our Full Range of SEO Solutions!</h3>
         <ul>
           <li>Keyword Research & Strategy</li>
           <li>On-Page SEO (Meta Tags, Content Optimization, Internal Linking)</li>
@@ -44,7 +44,7 @@ function Seo() {
           <li>SEO Audits & Reporting</li>
         </ul>
 
-        <h3>Our Packages</h3>
+        <h3>Our Pricing Options</h3>
         <p>We offer affordable SEO packages based on your business needs. Below are our prices:</p>
         <div className="price">
           <div>
@@ -71,7 +71,7 @@ function Seo() {
       </section>
 
       <section className="seo-form">
-        <h2>Submit Your Website for SEO Optimization</h2>
+        <h2>Submit you site for SEO Analysis</h2>
         <form onSubmit={handleSubmit}>
           <label>
             Full Name:

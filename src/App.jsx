@@ -12,6 +12,8 @@ import ContentWritingService from './pages/Content';
 import CareerDevelopmentPage from './pages/Career';
 import Mental from './pages/Mental';
 import BlogPage from './pages/Blogpage';
+import Contact from './pages/Contact';
+import Business from './pages/Business';
 
 
 
@@ -37,9 +39,8 @@ function App() {
         <Route path="/content" element={<ContentWritingService/>} />    
         <Route path="/career" element={<CareerDevelopmentPage/>} />
         <Route path="/mental" element={<Mental/>} />
-        
-        
-     
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/business" element ={<Business/>} />
       </Routes>
       <Footer/>
     

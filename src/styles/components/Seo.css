@@ -35,6 +35,11 @@
     color: cadetblue;
     font-weight: 500;
   }
+
+  .seo-details h3 {
+    font-size: 1.6rem;
+
+  }
   
   .seo-details ul {
     list-style: none;
@@ -47,6 +52,7 @@
     margin-bottom: 15px;
     padding-left: 30px;
     position: relative;
+    text-align: start;
   }
   
   .seo-details ul li::before {
@@ -130,7 +136,7 @@
   }
   
   .seo-form h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
     color: #1c3f60;
