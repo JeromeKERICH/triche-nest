@@ -24,30 +24,25 @@ import Business from './pages/Business';
 
 function App() {
   return (
-    <Router>
-      <Navbar /> 
-      
-      
+    <Router basename="/triche-nest">
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} /> 
-        <Route path="/blog" element={<BlogPage/>} />
-        
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<BlogPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/web" element={<Web />} />
-        <Route path="/quality" element={<QualityAssurance/>} />
-        <Route path="/seo" element={<Seo/>} />    
-        <Route path="/content" element={<ContentWritingService/>} />    
-        <Route path="/career" element={<CareerDevelopmentPage/>} />
-        <Route path="/mental" element={<Mental/>} />
-        <Route path="/contact" element={<Contact/>} />
-        <Route path="/business" element ={<Business/>} />
+        <Route path="/quality" element={<QualityAssurance />} />
+        <Route path="/seo" element={<Seo />} />
+        <Route path="/content" element={<ContentWritingService />} />
+        <Route path="/career" element={<CareerDevelopmentPage />} />
+        <Route path="/mental" element={<Mental />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/business" element={<Business />} />
       </Routes>
-      <Footer/>
-    
-  
-     
+      <Footer />
     </Router>
   );
 }
+
 
 export default App;
