@@ -1,4 +1,3 @@
-// App.jsx
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import Navbar from './components/Navbar'; 
 import Home from './pages/Home'; 
@@ -15,25 +14,18 @@ import BlogPage from './pages/Blogpage';
 import Contact from './pages/Contact';
 import Business from './pages/Business';
 
-
-
-
-
-
-
-
 function App() {
   return (
-    <Router basename="/triche-nest">
-      <Navbar />
+    <Router>  
+      <Navbar /> 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} /> 
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/web" element={<Web />} />
         <Route path="/quality" element={<QualityAssurance />} />
-        <Route path="/seo" element={<Seo />} />
-        <Route path="/content" element={<ContentWritingService />} />
+        <Route path="/seo" element={<Seo />} />    
+        <Route path="/content" element={<ContentWritingService />} />    
         <Route path="/career" element={<CareerDevelopmentPage />} />
         <Route path="/mental" element={<Mental />} />
         <Route path="/contact" element={<Contact />} />
@@ -43,6 +35,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;

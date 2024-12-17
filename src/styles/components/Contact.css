@@ -45,6 +45,7 @@
 
 .contact-details ul li {
   margin-bottom: 30px;
+  text-align: start;
 }
 
 .contact-details ul a {

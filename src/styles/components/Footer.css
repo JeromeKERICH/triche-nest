@@ -43,6 +43,7 @@
     color: #f5a623; 
     margin-bottom: 1rem;
     font-size: 1.2rem;
+    text-align: center;
   }
 
 
@@ -62,6 +63,7 @@
     text-decoration: none;
     color: #ffffff;
     transition: color 0.3s ease;
+    
   }
   
   .footer-links a:hover,
