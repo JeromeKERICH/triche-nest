@@ -1,4 +1,4 @@
-
+import App from '../App';
 import CTA from '../components/CTA';
 import FAQ from '../components/FAQ';
 import Hero from '../components/Hero';
@@ -7,6 +7,7 @@ import Projects from '../components/Projects'
 import Reason from '../components/Reason';
 import Service from '../components/Service'
 import Testimonials from '../components/Testimonials';
+import App from './
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Reason/>
       <FAQ />
       <Testimonials/>
+      <App/>
       
     </div>
   );
