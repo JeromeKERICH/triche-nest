@@ -1,4 +1,4 @@
-import App from '../App';
+
 import CTA from '../components/CTA';
 import FAQ from '../components/FAQ';
 import Hero from '../components/Hero';
@@ -20,7 +20,7 @@ const Home = () => {
       <Reason/>
       <FAQ />
       <Testimonials/>
-      <App/>
+      
       
     </div>
   );
