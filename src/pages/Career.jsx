@@ -5,7 +5,7 @@ const services = [
   { 
     id: 'resumeReview', 
     title: 'Resume Review', 
-    price: 50, // Changed to a number
+    price: 50, 
     description: 'Get expert feedback on your resume and improve your chances of landing a job.',
     features: [
       'Comprehensive review of your resume layout.',
@@ -18,7 +18,7 @@ const services = [
   { 
     id: 'coverLetterWriting', 
     title: 'Cover Letter Writing', 
-    price: 60, // Changed to a number
+    price: 60, 
     description: 'A well-crafted cover letter to make your application stand out.',
     features: [
       'Tailored cover letter for each job application.',
@@ -31,7 +31,7 @@ const services = [
   { 
     id: 'interviewCoaching', 
     title: 'Interview Coaching', 
-    price: 80, // Changed to a number
+    price: 80, 
     description: 'Prepare for interviews with mock sessions and professional guidance.',
     features: [
       'Mock interview sessions with a professional coach.',

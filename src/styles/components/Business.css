@@ -1,6 +1,4 @@
 
-  
-  /* Hero Section */
   .heros {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/34.jpg') no-repeat center center;
     background-size: cover;
@@ -146,7 +144,7 @@
   }
   
 
-/* Modal Overlay */
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -181,7 +179,7 @@
   cursor: pointer;
 }
 
-/* Packages Section */
+
 .packages {
   display: flex;
   gap: 20px;
@@ -195,7 +193,7 @@
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(33% - 20px); /* Takes up one-third of the width with a gap */
+  flex: 1 1 calc(33% - 20px); 
   max-width: 300px;
 }
 
@@ -229,7 +227,7 @@
   
   
   @media(max-width: 768px) {
-    /* Hero Section */
+
     .heros {
       padding: 40px 20px;
     }
@@ -292,6 +290,7 @@
 
     .forms-section h3 {
         font-size: 1.5rem;
+       
     }
 
     /*modal*/

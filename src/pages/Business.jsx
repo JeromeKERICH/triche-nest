@@ -16,9 +16,9 @@ const Business = () => {
 
   useEffect(() => {
     const hour = new Date().getHours();
-    if (hour > 8) {
+    if (hour < 12) {
       setGreeting("Good Morning");
-    } else if (hour > 16) {
+    } else if (hour > 18) {
       setGreeting("Good Afternoon");
     } else {
       setGreeting("Good Evening");
@@ -47,18 +47,18 @@ const Business = () => {
   };
 
   const handleVipJoin = () => {
-    setIsModalOpen((prevState) => !prevState); // Toggle modal open/close
+    setIsModalOpen((prevState) => !prevState); 
   };
 
   const closeModal = (e) => {
     if (e.target.classList.contains("modal")) {
-      setIsModalOpen(false); // Close modal when clicked outside of it
+      setIsModalOpen(false); 
     }
   };
 
   return (
     <div>
-      {/* Hero Section */}
+      
       <section className="heros" id="homes">
         <div className="heros-content">
           <h1>{greeting}, Business Leader!</h1>
@@ -66,17 +66,17 @@ const Business = () => {
         </div>
       </section>
 
-      {/* Business Solutions Section */}
+     
       <section id="infos" className="infos-section">
         <h2>Tailored Solutions for Your Business</h2>
         <p>Whether you're looking for guidance on scaling, optimizing processes, or overcoming specific challenges, we have the tools and resources to support your business.</p>
-        {/* Updated button with link */}
+        
         <a href="https://chat.whatsapp.com/Dh3atk77f3k4n4QcJ6ZIHi" className="vip-button">
           Join Exclusive Business Connect
         </a>
       </section>
 
-      {/* Contact and Form Section */}
+    
       <section id="forms" className="forms-section">
         <h2>Let Us Help Your Business</h2>
         <form onSubmit={handleSubmit} className="forms-container">
@@ -146,7 +146,7 @@ const Business = () => {
           </button>
         </section>
 
-        {/* Modal component */}
+        
         {isModalOpen && (
           <div className="modal" onClick={closeModal}>
             <div className="modals-content" onClick={(e) => e.stopPropagation()}>

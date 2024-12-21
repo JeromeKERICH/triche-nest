@@ -64,7 +64,7 @@ const Navbar = () => {
           <i className="fas fa-briefcase"></i>
           <span className="nav-text">Business</span>
         </a>
-        <a href="/courses" className="nav-item">
+        <a href="/blog" className="nav-item">
           <i className="fas fa-feather-alt"></i>
           <span className="nav-text">Blog</span>
         </a>

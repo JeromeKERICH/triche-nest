@@ -115,6 +115,8 @@ const App = () => {
                 <li>Free Domain & Hosting</li>
               </ul>
               <button className="buy-now" onClick={handleBuyNow}>Buy Now</button>
+              
+              
             </div>
           </div>
         </section>
