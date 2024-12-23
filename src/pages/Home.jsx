@@ -7,6 +7,7 @@ import Projects from '../components/Projects'
 import Reason from '../components/Reason';
 import Service from '../components/Service'
 import Testimonials from '../components/Testimonials';
+import App from './
 
 const Home = () => {
   return (
