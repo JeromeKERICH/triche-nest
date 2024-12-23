@@ -39,9 +39,9 @@ const Navbar = () => {
       {/* Desktop Navigation Links */}
       <ul className="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/business">Business</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/about">About Us</a></li>
+        <li><a href="/business" id='business'>Business</a></li>
+        <li><a href="/blog" id='blog'>Blog</a></li>
+        <li><a href="/about" id='about'>About Us</a></li>
         
         <li>
           <li><Link to="/contact" className="contact-button onClick+{toggleIcons}">Contact</Link>
@@ -56,19 +56,19 @@ const Navbar = () => {
           <i className="fas fa-home"></i>
           <span className="nav-text">Home</span>
         </a>
-        <a href="/about" className="nav-item">
+        <a href="/about" id='about' className="nav-item">
           <i className="fas fa-user"></i>
           <span className="nav-text">About</span>
         </a>
-        <a href="/business" className="nav-item">
+        <a href="/business" id='business' className="nav-item">
           <i className="fas fa-briefcase"></i>
           <span className="nav-text">Business</span>
         </a>
-        <a href="/blog" className="nav-item">
+        <a href="/blog" id='blog' className="nav-item">
           <i className="fas fa-feather-alt"></i>
           <span className="nav-text">Blog</span>
         </a>
-        <a href="/contact" className="nav-item" onClick={toggleIcons}>
+        <a href="/contact" id='contact' className="nav-item" onClick={toggleIcons}>
          <i className="fa fa-phone"></i>
           <span className="nav-text">Contact</span>
         </a>
