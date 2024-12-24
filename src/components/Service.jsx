@@ -3,7 +3,7 @@ import { FaCode, FaPaintBrush, FaMobileAlt, FaSearch, FaPen, FaBriefcase } from 
 import '../styles/components/Service.css';
 const services = [
   { id: 'web', title: 'Web Development', icon: <FaCode />, description: 'Building responsive and modern websites for your business.' },
-  { id: 'businessconsulting', title: 'Business Consulting', icon: <FaPaintBrush />, description: 'Organizational structure, strategy, and operational efficiency' },
+  { id: 'business', title: 'Business Consulting', icon: <FaPaintBrush />, description: 'Organizational structure, strategy, and operational efficiency' },
   { id: 'quality', title: 'Web Quality Assurance (QA)', icon: <FaMobileAlt />, description: 'Ensuring that a website meets predefined quality standards' },
   { id: 'seo', title: 'SEO', icon: <FaSearch />, description: 'Optimizing your website to rank higher on search engines.' },
   { id: 'content', title: 'Content Writing', icon: <FaPen />, description: 'Crafting engaging and SEO-optimized content.' },
