@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import '../styles/components/Hero.css';
+import '../styles/Hero.css';
 
 const heroData = [
   {

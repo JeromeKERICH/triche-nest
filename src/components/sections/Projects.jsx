@@ -3,7 +3,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import '../styles/components/Projects.css';
+import '../styles/Projects.css';
 
 const projects = [
   { id: 2, image: '/assets/abth.jpg', title: 'Abthan Technologies', description: 'Internt Service Provider.' },

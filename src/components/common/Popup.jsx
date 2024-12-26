@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "../styles/components/Popup.css";
+import '../styles/Popup.css';
 import { redirect } from 'react-router-dom';
 
 const Popup = () => {

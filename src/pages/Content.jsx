@@ -1,4 +1,4 @@
-import '../styles/components/Content.css';  
+import './styles/Content.css';  
 
 const ContentWritingService = () => {
   return (

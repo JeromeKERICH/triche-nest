@@ -1,10 +1,9 @@
-import '../styles/components/web.css';
-import { FaShoppingCart, FaPaintBrush, FaFileAlt, FaBriefcase, FaUniversity, FaHeart, FaNewspaper, FaMobileAlt, FaWhatsapp } from 'react-icons/fa'; // Import icons
+import './styles/Web.css';
+import { FaShoppingCart, FaPaintBrush, FaFileAlt, FaBriefcase, FaUniversity, FaHeart, FaNewspaper, FaMobileAlt, FaWhatsapp, FaCheckCircle } from 'react-icons/fa'; // Import icons
 
 const App = () => {
   const handleBuyNow = () => {
     alert('Redirecting to purchase page...');
-    
   };
 
   const handleWhatsapp = () => {
@@ -13,13 +12,28 @@ const App = () => {
 
   return (
     <div className="app">
-      
-
-     
       <main>
+        
+        <section id="introduction">
+          <h2>Why You Need a Website for Your Business</h2>
+          <p>
+            In today’s digital world, having a website is essential for any business or individual aiming to grow and succeed. A website acts as your online presence, showcasing your products, services, or portfolio, and offering a direct line of communication with your audience.
+          </p>
+          <ul>
+            <li><FaCheckCircle size={20} /> 24/7 Availability</li>
+            <li><FaCheckCircle size={20} /> Global Reach</li>
+            <li><FaCheckCircle size={20} /> Build Credibility</li>
+            <li><FaCheckCircle size={20} /> Increase Customer Engagement</li>
+            <li><FaCheckCircle size={20} /> Easy Access to Information</li>
+            <li><FaCheckCircle size={20} /> Professional Branding</li>
+          </ul>
+        </section>
+
        
         <section id="services">
+        <h2>Find Your Perfect Site</h2>
           <div className="services-container">
+            
             <div className="services-card">
               <FaFileAlt size={50} />
               <h3>Landing Page</h3>
@@ -115,8 +129,6 @@ const App = () => {
                 <li>Free Domain & Hosting</li>
               </ul>
               <button className="buy-now" onClick={handleBuyNow}>Buy Now</button>
-              
-              
             </div>
           </div>
         </section>

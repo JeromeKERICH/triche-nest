@@ -1,6 +1,5 @@
 
-import "../styles/components/Testimonials.css";
-
+import "../styles/Testimonials.css"
 const testimonialsData = [
   {
     name: "Lucy Kariuki",
@@ -15,7 +14,7 @@ const testimonialsData = [
     image: "assets/kirui.jpeg",
   },
   {
-    name: "Michael Brown",
+    name: "Michael Kings",
     role: "Freelancer",
     feedback: "Career development coaching helped me land my dream job. Amazing experience!",
     image: "https://via.placeholder.com/100",

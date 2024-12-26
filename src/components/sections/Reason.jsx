@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShieldAlt, faUsers, faHandshake } from '@fortawesome/free-solid-svg-icons';
-import '../styles/components/Reason.css';
+import '../styles/Reason.css';
 
 const Reason = () => {
   const features = [

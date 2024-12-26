@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import '../styles/components/Abut.css';  
+import './styles/Abut.css';  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode, faBullhorn, faPenFancy, faSearch, faUserTie, faHeartbeat, faBook } from '@fortawesome/free-solid-svg-icons';
 import career from '/assets/caree2r.jpg';  
-import CTA from '../components/CTA';
+import './styles/Abut.css'
 
 const About = () => {
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);

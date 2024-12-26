@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/components/Quality.css'
+import './styles/Quality.css'
 
 function QualityAssurance() {
   const [formData, setFormData] = useState({

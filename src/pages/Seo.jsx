@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import '../styles/components/Seo.css'
+import './styles/Seo.css'
 
 function Seo() {
   const [formData, setFormData] = useState({

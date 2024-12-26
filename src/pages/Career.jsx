@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/components/Career.css';
+import './styles/Career.css';
 
 const services = [
   { 

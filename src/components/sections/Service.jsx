@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaCode, FaPaintBrush, FaMobileAlt, FaSearch, FaPen, FaBriefcase } from 'react-icons/fa';
-import '../styles/components/Service.css';
+import '../styles/Service.css';
 const services = [
   { id: 'web', title: 'Web Development', icon: <FaCode />, description: 'Building responsive and modern websites for your business.' },
   { id: 'business', title: 'Business Consulting', icon: <FaPaintBrush />, description: 'Organizational structure, strategy, and operational efficiency' },

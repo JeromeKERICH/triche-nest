@@ -1,38 +1,15 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
-import Navbar from './components/Navbar'; 
-import Home from './pages/Home'; 
-import About from './pages/About'; 
-import './styles/components/Navbar.css'; 
-import Footer from './components/Footer';
-import Web from './pages/Web';
-import QualityAssurance from './pages/Quality';
-import Seo from './pages/Seo';
-import ContentWritingService from './pages/Content';
-import CareerDevelopmentPage from './pages/Career';
-import Mental from './pages/Mental';
-import BlogPage from './pages/Blogpage';
-import Contact from './pages/Contact';
-import Business from './pages/Business';
-import CheckoutForm from './pages/CheckoutPages';
+import { BrowserRouter as Router } from 'react-router-dom'; 
+import Navbar from './components/layout/Navbar'; 
+import Footer from './components/layout/Footer';
+import AppRouter from './router/AppRouter';  
+
+import './components/styles/Navbar.css'; 
 
 function App() {
   return (
     <Router>  
       <Navbar /> 
-      <Routes>
-        <Route path="/" element={<Home />} /> 
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/web" element={<Web />} />
-        <Route path="/quality" element={<QualityAssurance />} />
-        <Route path="/seo" element={<Seo />} />    
-        <Route path="/content" element={<ContentWritingService />} />    
-        <Route path="/career" element={<CareerDevelopmentPage />} />
-        <Route path="/mental" element={<Mental />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/business" element={<Business />} />
-        <Route path="checkoutpage" element={<CheckoutForm />} />
-      </Routes>
+      <AppRouter />  
       <Footer />
     </Router>
   );

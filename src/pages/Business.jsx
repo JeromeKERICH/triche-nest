@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/components/Business.css";
+import './styles/Business.css'
 
 const Business = () => {
   const [formData, setFormData] = useState({

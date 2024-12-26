@@ -1,11 +1,12 @@
-import CTA from '../components/CTA';
-import FAQ from '../components/FAQ';
-import Hero from '../components/Hero';
-import Popup from '../components/Popup';
-import Projects from '../components/Projects'
-import Reason from '../components/Reason';
-import Service from '../components/Service'
-import Testimonials from '../components/Testimonials';
+
+import CTA from '../components/common/CTA';
+import FAQ from '../components/sections/FAQ'
+import Hero from '../components/sections/Hero';
+import Popup from '../components/common/Popup';
+import Projects from '../components/sections/Projects'
+import Reason from '../components/sections/Reason';
+import Service from '../components/sections/Service'
+import Testimonials from '../components/sections/Testimonials';
 
 const Home = () => {
   return (
@@ -13,10 +14,10 @@ const Home = () => {
       <Hero />
       <Popup/>
       <Projects />
-      <CTA />
+      <CTA/>
       <Service />
       <Reason/>
-      <FAQ />
+      <FAQ/>
       <Testimonials/>
   
       

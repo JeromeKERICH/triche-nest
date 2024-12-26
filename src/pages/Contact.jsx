@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/components/Contact.css'; 
+import './styles/Contact.css'; 
 import { FaShoppingCart, FaPaintBrush, FaFileAlt, FaBriefcase, FaUniversity, FaHeart, FaNewspaper, FaMobileAlt, FaWhatsapp } from 'react-icons/fa'; // Import icons
 
 const Contact = () => {
