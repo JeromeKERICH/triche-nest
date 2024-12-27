@@ -79,16 +79,16 @@ const CareerDevelopmentPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Perform submission logic here (e.g., send to a server)
+    
     alert(`Thank you for your submission, ${name}!`);
 
-    // Reset the form fields to their default state
+    
     setName('');
     setEmail('');
     setResumeFile(null);
     setSelectedService([]);
 
-    // Reset file input field
+    
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -123,7 +123,7 @@ const CareerDevelopmentPage = () => {
       </div>
 
       <div className="form-container">
-        {/* Resume Form Section */}
+      
         <div className="resume-upload-section">
           <h3>Submit Your Resume</h3>
           <form onSubmit={handleSubmit}>

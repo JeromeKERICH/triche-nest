@@ -108,7 +108,7 @@
   }
 
   .modern-blog-grid {
-    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    grid-template-columns: 1fr; 
   }
 
   .modern-blog-card {

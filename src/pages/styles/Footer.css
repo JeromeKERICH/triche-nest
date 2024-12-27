@@ -71,7 +71,7 @@
     color: #f5a623;
   }
   
-  /* Contact Info */
+
   .footer-contact p {
     margin: 0.5rem 0;
   }
@@ -86,7 +86,7 @@
     color: #aaaaaa;
   }
   
-  /* Responsive Layout */
+
   @media (max-width: 768px) {
 
     .footer-content {

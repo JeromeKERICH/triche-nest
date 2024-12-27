@@ -29,7 +29,7 @@
     margin-bottom: 20px;
   }
   
-  /* Buttons */
+
   .buy-btn,
   .whatsapp-btn,
   .submit-btn {
@@ -71,7 +71,7 @@
     background-color: #075E54; 
   }
   
-  /* Form Styling */
+ 
   
   .qa-form {
     background-color: #ffffff;
@@ -176,7 +176,7 @@
   }
   
   @media (max-width: 480px) {
-    /* Adjustments for very small screens */
+    
     .qa-section h2,
     .qa-section h3 {
       font-size: 1.5rem;

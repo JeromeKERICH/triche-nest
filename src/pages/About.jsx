@@ -20,7 +20,7 @@ const About = () => {
        
         <section className="about-section">
             <div className="about-container">
-                {/* About Section */}
+               
                 <div className="about-image">
                     <img src={career} alt="Triche Nest" />
                 </div>

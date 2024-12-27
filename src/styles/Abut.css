@@ -71,7 +71,7 @@
     }
   }
   
-  /* Responsive styles */
+
   @media (max-width: 1024px) {
   
     .about-section {
@@ -121,7 +121,7 @@
   }
  
 
-/* Responsive Grid Layout */
+
 .vision-section,
 .mission-section,
 .core-values-section {
@@ -138,7 +138,7 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Headings Styling */
+
 .vision-section h2,
 .mission-section h2,
 .core-values-section h2 {
@@ -147,7 +147,7 @@
     color: #1c3f60;
 }
 
-/* Core Values List Styling */
+
 .core-values-list {
     display: grid;
     grid-template-columns: 1fr;
@@ -170,7 +170,7 @@
     list-style: none;
 }
 
-/* Large Screen (Desktop) */
+
 @media (min-width: 768px) {
     
     .vision-section,
@@ -193,7 +193,7 @@
     }
 }
 
-/* Small Screen (Mobile) */
+
 @media (max-width: 767px) {
     .vision-section,
     .mission-section,
@@ -303,11 +303,11 @@
 }
 
 .social-links a:hover {
-  color: #1da1f2; /* Twitter Blue */
+  color: #1da1f2; 
 }
 
 .social-links a:nth-child(2):hover {
-  color: #3b5998; /* Facebook Blue */
+  color: #3b5998; 
 }
 
 

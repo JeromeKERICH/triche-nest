@@ -186,7 +186,7 @@
     transform: scale(1.05);
   }
   
-  /* Responsive Styles */
+
   @media (max-width: 768px) {
     .App-header  {
         padding-top: 25%;

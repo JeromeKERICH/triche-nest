@@ -133,7 +133,7 @@ const App = () => {
           </div>
         </section>
 
-        {/* Service Explanation Section */}
+        {/* Services Section */}
         <section id="explanation">
           <h2>Why Choose Us?</h2>
           <p>

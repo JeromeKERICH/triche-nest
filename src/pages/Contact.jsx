@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <div className="contact-page">
       <div className="contact-container">
-        {/* Left Section: Contact Details */}
+        {/*Contact Details */}
         <div className="contact-details">
           <h2>Get in Touch</h2>
           <p>Feel free to reach out to us via the form or through the contact details provided below.</p>
@@ -30,7 +30,7 @@ const Contact = () => {
           </ul>
         </div>
 
-        {/* Right Section: Contact Form */}
+        {/*Contact Form */}
         <div className="contact-form">
           <h2>Contact Form</h2>
           <form>
@@ -50,7 +50,7 @@ const Contact = () => {
           </form>
         </div>
 
-        {/* Service Explanation Section */}
+        {/* Service Section */}
         <section id="explanation">
           <h2>Need Something Urgent? We've Got You Covered</h2>
           <p>

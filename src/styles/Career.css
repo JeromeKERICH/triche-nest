@@ -143,7 +143,7 @@
   }
   
   .contact-us-section button {
-    background-color: #25D366; /* WhatsApp Green */
+    background-color: #25D366; 
     color: white;
     padding: 12px 24px;
     font-size: 16px;
@@ -154,7 +154,7 @@
   }
   
   .contact-us-section button:hover {
-    background-color: #128C7E; /* WhatsApp Dark Green */
+    background-color: #128C7E; 
   }
   
   .contact-us-section a {
@@ -162,7 +162,7 @@
     color: white;
   }
   
-  /* Responsive Styling for Small Screens */
+ 
   @media (max-width: 768px) {
 
     .career-development-page h1 {
@@ -210,10 +210,10 @@
     }
   }
   
-  /* Styling for Larger Screens */
+
   @media (min-width: 769px) {
     .available-services {
-      grid-template-columns: 1fr 1fr; /* 2-column layout for larger screens */
+      grid-template-columns: 1fr 1fr; 
     }
   
     .form-container {

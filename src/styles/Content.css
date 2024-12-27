@@ -1,4 +1,4 @@
-/* Coming Soon Section Styles */
+
 .coming-soon {
     display: flex;
     justify-content: center;
@@ -36,7 +36,7 @@
     font-style: italic;
   }
   
-  /* Responsive Design */
+  
   @media (max-width: 768px) {
     .coming-soon {
       padding: 1rem;
