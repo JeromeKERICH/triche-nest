@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './styles/Career.css';
 
 const services = [
@@ -61,6 +61,7 @@ const CareerDevelopmentPage = () => {
   const [selectedService, setSelectedService] = useState([]);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const fileInputRef = useRef(null);
 
   const handleResumeChange = (e) => {
     setResumeFile(e.target.files[0]);
@@ -77,7 +78,20 @@ const CareerDevelopmentPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Perform submission logic here (e.g., send to a server)
     alert(`Thank you for your submission, ${name}!`);
+
+    // Reset the form fields to their default state
+    setName('');
+    setEmail('');
+    setResumeFile(null);
+    setSelectedService([]);
+
+    // Reset file input field
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
   };
 
   return (
@@ -135,6 +149,7 @@ const CareerDevelopmentPage = () => {
             <input
               type="file"
               id="resume"
+              ref={fileInputRef}
               onChange={handleResumeChange}
               required
               accept=".pdf,.doc,.docx"

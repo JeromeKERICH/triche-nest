@@ -46,4 +46,7 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+#pass
+.env
 >>>>>>> cd0f93e45a45129f306014f608afc64aa3176867

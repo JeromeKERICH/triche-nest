@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
-import './styles/Seo.css'
+import emailjs from 'emailjs-com';
+import './styles/Seo.css';
 
 function Seo() {
   const [formData, setFormData] = useState({
@@ -19,20 +19,41 @@ function Seo() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here, you can handle form submission (e.g., send data to a server)
-    console.log(formData);
+
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        formData,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Your site has been submitted for SEO analysis!');
+          setFormData({ name: '', email: '', websiteUrl: '' }); // Reset form
+        },
+        (error) => {
+          console.log('FAILED...', error);
+          alert('There was an error submitting your site. Please try again.');
+        }
+      );
   };
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Drive Traffice, Increase Leads</h1>
+        <h1>Drive Traffic, Increase Leads</h1>
         <p>Boost your online visibility and rank higher on search engines</p>
       </header>
 
       <section className="seo-details">
         <h2>Your Go-To SEO Experts</h2>
-        <p>SEO (Search Engine Optimization) is the key to improving your website's visibility and attracting organic traffic. Our team specializes in enhancing your online presence and helping you rank higher on search engines like Google, Yahoo, and Bing.</p>
+        <p>
+          SEO (Search Engine Optimization) is the key to improving your website's visibility and attracting organic traffic.
+          Our team specializes in enhancing your online presence and helping you rank higher on search engines like Google, Yahoo, and Bing.
+        </p>
 
         <h3>Our Full Range of SEO Solutions!</h3>
         <ul>
@@ -65,45 +86,51 @@ function Seo() {
         </div>
 
         <div className="cta-butt">
-          <a href="/buy-now" className="buy-now-button">Buy Now</a>
-          <a href="https://wa.me/254788120422" target="_blank" className="whatsapp-button">Talk with us on WhatsApp</a>
+          <a href="https://wa.me/254788120422" target="_blank" rel="noopener noreferrer" className="whatsapp-button">
+            Talk with us on WhatsApp
+          </a>
         </div>
       </section>
 
       <section className="seo-form">
-        <h2>Submit you site for SEO Analysis</h2>
+        <h2>Submit Your Site for SEO Analysis</h2>
         <form onSubmit={handleSubmit}>
           <label>
             Full Name:
-            <input 
-              type="text" 
-              name="name" 
-              value={formData.name} 
-              onChange={handleChange} 
-              required 
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              aria-label="Full Name"
+              required
             />
           </label>
           <label>
             Email Address:
-            <input 
-              type="email" 
-              name="email" 
-              value={formData.email} 
-              onChange={handleChange} 
-              required 
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              aria-label="Email Address"
+              required
             />
           </label>
           <label>
             Website URL:
-            <input 
-              type="url" 
-              name="websiteUrl" 
-              value={formData.websiteUrl} 
-              onChange={handleChange} 
-              required 
+            <input
+              type="url"
+              name="websiteUrl"
+              value={formData.websiteUrl}
+              onChange={handleChange}
+              aria-label="Website URL"
+              required
             />
           </label>
-          <button type="submit" className="submit-button">Submit</button>
+          <button type="submit" className="submit-button">
+            Submit
+          </button>
         </form>
       </section>
     </div>

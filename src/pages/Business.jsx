@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './styles/Business.css'
+import './styles/Business.css';
 
 const Business = () => {
   const [formData, setFormData] = useState({
@@ -41,9 +41,25 @@ const Business = () => {
     setBusinessResources(resources[businessType] || []);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    
+    try {
+      const response = await fetch('http://localhost:5000/send-email', {  
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+        setFormData({ name: "", email: "", businessType: "", queryType: "Concern", message: "" });
+      } else {
+        alert('Failed to send message. Try again later.');
+      }
+    } catch (error) {
+      alert('An error occurred: ' + error.message);
+    }
   };
 
   const handleVipJoin = () => {
@@ -58,7 +74,6 @@ const Business = () => {
 
   return (
     <div>
-      
       <section className="heros" id="homes">
         <div className="heros-content">
           <h1>{greeting}, Business Leader!</h1>
@@ -66,7 +81,6 @@ const Business = () => {
         </div>
       </section>
 
-     
       <section id="infos" className="infos-section">
         <h2>Tailored Solutions for Your Business</h2>
         <p>Whether you're looking for guidance on scaling, optimizing processes, or overcoming specific challenges, we have the tools and resources to support your business.</p>
@@ -76,7 +90,6 @@ const Business = () => {
         </a>
       </section>
 
-    
       <section id="forms" className="forms-section">
         <h2>Let Us Help Your Business</h2>
         <form onSubmit={handleSubmit} className="forms-container">
@@ -146,7 +159,6 @@ const Business = () => {
           </button>
         </section>
 
-        
         {isModalOpen && (
           <div className="modal" onClick={closeModal}>
             <div className="modals-content" onClick={(e) => e.stopPropagation()}>

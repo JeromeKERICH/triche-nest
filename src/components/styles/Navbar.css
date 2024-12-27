@@ -45,9 +45,7 @@
     transition: color 0.3s ease;
   }
   
-  .social-media a:hover {
-    color: #ffd700;
-  }
+  
  
   .nav-links {
     display: flex;
@@ -66,9 +64,7 @@
     transition: color 0.3s ease;
   }
   
-  .nav-links a:hover {
-    color: #ffd700;
-  }
+  
   
   /* Contact Button */
   .contact-button {
@@ -138,10 +134,7 @@
     text-align: center; 
   }
 
-  /* Hover effect */
-  .mobile-navbar .nav-item:hover {
-    color: #ffd700; 
-  }
+  
 
   .nav-links {
     display: none;
@@ -190,10 +183,7 @@
       text-align: center; 
     }
   
-    /* Hover effect */
-    .mobile-navbar .nav-item:hover {
-      color: #ffd700; 
-    }
+    
   }
   
   @media (max-width: 850px) {

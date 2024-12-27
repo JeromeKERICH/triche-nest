@@ -60,6 +60,154 @@
     background: #1a5ed1;
   }
   
+
+  /* CTA.css */
+
+/* General styling */
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.cta-content {
+  text-align: center;
+}
+
+.cta-buttons {
+  margin-top: 20px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #1c3f60;
+  color: white;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #f7f7f7;
+  color: #333;
+  border: none;
+}
+
+/* CTA.css */
+
+/* Form container styles */
+.cta-form-container {
+  margin-top: 30px;
+  background-color: #f7f7f7;
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form h2 {
+  text-align: center;
+}
+
+.cta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cta-form label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.cta-form input, .cta-form select, .cta-form textarea {
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cta-form-submit,
+.cta-form-close {
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.cta-form-submit {
+  background-color: #005f72;
+  color: white;
+  border: none;
+  margin: 20px;
+}
+
+
+
+.cta-form-close {
+  
+  background-color: #ff3333;
+  color: white;
+  border: none;
+}
+
+
+
+/* Responsive design for the form */
+@media (max-width: 768px) {
+  .cta-container {
+    padding: 10px;
+  }
+  .cta-content h1 {
+    font-size: 24px;
+  }
+  .cta-form-container {
+    padding: 15px;
+  }
+  .cta-form input, .cta-form select, .cta-form textarea {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-container {
+    padding: 10px;
+  }
+  .cta-content h1 {
+    font-size: 20px;
+  }
+  .cta-form-container {
+    padding: 12px;
+  }
+  .cta-form input, .cta-form select, .cta-form textarea {
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .cta-container {
+    padding: 10px;
+  }
+  .cta-content h1 {
+    font-size: 20px;
+  }
+  .cta-form-container {
+    padding: 12px;
+  }
+  .cta-form input, .cta-form select, .cta-form textarea {
+    font-size: 12px;
+  }
+}
+
   /* Responsive Styles */
   @media (max-width: 768px) {
     .cta-content h1 {

@@ -45,11 +45,11 @@ const Navbar = () => {
         <li><a href="/blog" id='blog'>Blog</a></li>
         <li><a href="/about" id='about'>About Us</a></li>
         
-        <li>
-          <li><Link to="/contact" className="contact-button onClick+{toggleIcons}">Contact</Link>
-        </li>
+        
+
+        <li><a href='/contact' id='contact' className="contact-button onClick+{toggleIcons}">Contact</a></li>
           
-        </li>
+        
       </ul>
 
       {/* Mobile Navigation Links */}
@@ -70,10 +70,13 @@ const Navbar = () => {
           <i className="fas fa-feather-alt"></i>
           <span className="nav-text">Blog</span>
         </a>
-        <a href="/contact" id='contact' className="nav-item" onClick={toggleIcons}>
-         <i className="fa fa-phone"></i>
-          <span className="nav-text">Contact</span>
+        <a href='/contact' id='contact' className="nav-item">
+        <i className="fa fa-phone"></i>
+        <span className="nav-text">Contact</span>
         </a>
+
+
+        
       </nav>
     </nav>
   );

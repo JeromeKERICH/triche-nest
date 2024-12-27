@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode, faBullhorn, faPenFancy, faSearch, faUserTie, faHeartbeat, faBook } from '@fortawesome/free-solid-svg-icons';
 import career from '/assets/caree2r.jpg';  
 import './styles/Abut.css'
+import CTA from "../components/common/CTA";
 
 const About = () => {
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -44,7 +45,7 @@ const About = () => {
 
 
 
-            <CTA/>
+           <CTA/>
             {/* Vision Section */}
             <div className="vision-section">
                 <h2>Our Vision</h2>

@@ -21,10 +21,10 @@ const Contact = () => {
               <strong>Address:</strong> Remote
             </li>
             <li>
-              <strong>Phone:</strong> <a href="tel:+254788120422">+254 716 668 668</a>
+              <strong>Phone:</strong> <a href="tel:+254788120422">+254 788 120 422</a>
             </li>
             <li>
-              <strong>Email:</strong> <a href="mailto:info@trichenest.com">info@kitumbuic.com</a>
+              <strong>Email:</strong> <a href="mailto:info@trichenest.com">info@trichenest.com</a>
             </li>
             
           </ul>

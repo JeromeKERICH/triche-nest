@@ -14,6 +14,7 @@ import Contact from '../pages/Contact';
 import Business from '../pages/Business';
 
 
+
 const AppRouter = () => {
   return (
     <Routes>
@@ -28,6 +29,7 @@ const AppRouter = () => {
       <Route path="/mental" element={<Mental />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/business" element={<Business />} />
+    
       
     </Routes>
   );
