@@ -5,7 +5,6 @@ import './styles/Blog.css'
 const BlogPage = () => {
   const navigate = useNavigate();
 
-  const categories = ["Technology", "Health", "Lifestyle", "Education", "Business"];
   const blogs = [
     {
       id: 1,
@@ -23,7 +22,7 @@ const BlogPage = () => {
     },
     {
       id: 3,
-      title: "Starting a Business in 2024",
+      title: "Starting a Business in 2025",
       category: "Business",
       excerpt: "Key strategies to launch and grow your startup...",
       image: "https://via.placeholder.com/400x200",
@@ -31,37 +30,30 @@ const BlogPage = () => {
   ];
 
   return (
-    <div className="blog-page">
-      <header className="blog-header">
-        <h1>Triche Nest Blog</h1>
-        <p>Explore insights across various categories</p>
-      </header>
+    <section className="modern-blog-container">
+        <header className="modern-blog-header">
+          <h2>Our Latest Blogs</h2>
+          <p>Stay up to date with the latest trends and insights from various fields.</p>
+        </header>
 
-      <div className="blog-categories">
-        {categories.map((category, index) => (
-          <button key={index} className="category-btn">
-            {category}
-          </button>
-        ))}
-      </div>
-
-      <div className="blog-list">
-        {blogs.map((blog) => (
-          <div
-            className="blog-card"
-            key={blog.id}
-            onClick={() => navigate(`/blog/${blog.id}`)}
-          >
-            <img src={blog.image} alt={blog.title} />
-            <div className="blog-content">
-              <h2>{blog.title}</h2>
-              <p>{blog.excerpt}</p>
-              <button className="read-more">Read More</button>
+        <div className="modern-blog-grid">
+          {blogs.map((blog) => (
+            <div
+              className="modern-blog-card"
+              key={blog.id}
+              onClick={() => navigate(`/blog/${blog.id}`)}
+            >
+              <img className="modern-blog-image" src={blog.image} alt={blog.title} />
+              <div className="modern-blog-info">
+                <h3>{blog.title}</h3>
+                <span className="modern-blog-category">{blog.category}</span>
+                <p className="modern-blog-excerpt">{blog.excerpt}</p>
+                <button className="modern-read-more">Read More</button>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
+          ))}
+        </div>
+    </section>
   );
 };
 
