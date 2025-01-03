@@ -11,6 +11,7 @@ import Mental from '../pages/Mental';
 import BlogPage from '../pages/Blogpage';
 import Contact from '../pages/Contact';
 import Business from '../pages/Business';
+import PrivacyPolicy from '../pages/Policy';
 
 
 
@@ -28,6 +29,7 @@ const AppRouter = () => {
       <Route path="/mental" element={<Mental />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/business" element={<Business />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
     
       
     </Routes>
