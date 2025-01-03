@@ -15,7 +15,7 @@ const testimonialsData = [
   },
   {
     name: "Miriam Maru",
-    role: "Freelancer",
+    role: "Fiery Network",
     feedback: "Partnering with Emmanuel to design my website was seamless and amazing! He captured my vision perfectly, delivering a sleek, user-friendly, and visually striking design that truly represents my brand.",
     image: "assets/MAR.jpg",
   },

@@ -194,6 +194,10 @@
         padding-right: 4%;
     }
 
+    .App-header h1  {
+      font-size: 1.5rem;
+    }
+
     .seo-details {
         padding-left: 4%;
         padding-right: 4%;
@@ -222,12 +226,12 @@
   @media (max-width: 480px) {
     .seo-details h2,
     .seo-details h3 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       text-align: center;
     }
   
     .seo-form h2 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   }
   

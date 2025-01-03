@@ -3,7 +3,7 @@
     margin-top: 6%;
     padding-left: 10%;
     padding-right: 10%;
-    background: #f3f3f3;
+    background: #ffffff;
     margin-bottom: 50px;
     }
     
@@ -21,11 +21,11 @@
     }
     
     .service {
-      background: #fff;
+      background-color: #f4f4f4;
       border-radius: 10px;
       padding: 2rem;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
     
@@ -37,8 +37,9 @@
     .service-list h3 {
       font-size: 1.5rem;
       margin: 1rem 0 0.5rem;
+      font-size: 1.5rem;
       color: #105a80;
-      font-weight: 500;
+      font-weight: 600;
     }
     .service-list a {
       text-decoration: none;

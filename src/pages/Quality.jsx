@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './styles/Quality.css'
+import React, { useState, useEffect } from 'react';
+import './styles/Quality.css';
 
 function QualityAssurance() {
   const [formData, setFormData] = useState({
@@ -7,6 +7,11 @@ function QualityAssurance() {
     email: '',
     website: '',
   });
+
+  // Scroll to the top when the component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

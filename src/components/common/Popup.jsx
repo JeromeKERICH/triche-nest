@@ -39,7 +39,6 @@ const Popup = () => {
         <div className="popup-overlay">
           <div className="popup-container">
             <h1>Welcome to Triche Nest</h1>
-            <h2>What are you looking for?</h2>
             <p>Get instant access to our services with just one click!</p>
             <div className="services-list">
               {services.map((service) => (

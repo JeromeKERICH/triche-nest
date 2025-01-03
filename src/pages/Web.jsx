@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './styles/Web.css';
 import { FaShoppingCart, FaPaintBrush, FaFileAlt, FaBriefcase, FaUniversity, FaHeart, FaNewspaper, FaMobileAlt, FaWhatsapp, FaCheckCircle } from 'react-icons/fa'; // Import icons
 
@@ -9,6 +10,10 @@ const App = () => {
   const handleWhatsapp = () => {
     window.open('https://wa.me/254788120422', '_blank'); 
   };
+
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   return (
     <div className="app">

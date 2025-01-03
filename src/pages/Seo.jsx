@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import './styles/Seo.css';
 
@@ -16,6 +16,10 @@ function Seo() {
       [name]: value,
     });
   };
+
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();

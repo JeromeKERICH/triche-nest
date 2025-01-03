@@ -1,5 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect  } from 'react';
 import './styles/Career.css';
+
+
 
 const services = [
   { 
@@ -76,8 +78,13 @@ const CareerDevelopmentPage = () => {
     }
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
 
     
     alert(`Thank you for your submission, ${name}!`);
