@@ -6,10 +6,15 @@ const Business = () => {
   const [greeting, setGreeting] = useState("");
 
   useEffect(() => {
-    const hour = new Date().getHours();
+    const date = new Date();
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const userLocalTime = new Date(date.toLocaleString('en-US', { timeZone }));
+
+    const hour = userLocalTime.getHours();
+
     if (hour < 12) {
       setGreeting("Good Morning");
-    } else if (hour > 18) {
+    } else if (hour >= 12 && hour < 18) {
       setGreeting("Good Afternoon");
     } else {
       setGreeting("Good Evening");
