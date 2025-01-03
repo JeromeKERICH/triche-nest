@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import '../styles/Projects.css';
 
 const projects = [
-  { id: 2, image: '/assets/abth.jpg', title: 'Abthan Technologies', description: 'Internt Service Provider.' },
+  { id: 2, image: '/assets/abth.jpg', title: 'Abthan Technologies', description: 'Internet Service Provider.' },
   { id: 1, image: '/assets/thri.jpg', title: 'Thriving Moms Space', description: 'Empowering Motherhod Journey'},
   { id: 3, image: '/assets/high.jpg', title: 'HTC Hotel', description: 'Learn, Unwind & Have Fun' },
   { id: 4, image: '/assets/book.png', title: 'Book Jerome App', description: 'Booking App (Ongoing)'},
@@ -17,7 +17,7 @@ const Projects = () => {
 
   return (
     <section className="projects-section">
-      <h2 className="section-title">Recent Masterpieces</h2>
+      <h2 className="section-title">Recent Work</h2>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={20}

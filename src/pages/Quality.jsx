@@ -24,7 +24,6 @@ function QualityAssurance() {
       <h2>Boost Your Website's performance with QA!</h2>
       <p>We provide top-notch QA services to ensure that your web projects meet the highest standards of quality, functionality, security, and performance. Every website or web application you launch needs thorough testing to make sure it delivers the best possible user experience, performs optimally, and runs smoothly. Our expert testing and auditing processes are designed to identify and resolve any issues, allowing you to launch your site with confidence.</p>
       <div>
-        <h4>Cost: $20 per website</h4>
         <p>Delivery Time: 24 Hours</p>
       </div>
       

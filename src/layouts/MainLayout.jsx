@@ -7,7 +7,7 @@ const MainLayout = () => {
     <>
       <Navbar />
       <main>
-        <Outlet /> {/* This is where the page content will be rendered */}
+        <Outlet /> 
       </main>
       <Footer />
     </>

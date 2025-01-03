@@ -35,6 +35,8 @@
   
   
     .service-list h3 {
+      font-size: 1.5rem;
+      margin: 1rem 0 0.5rem;
       color: #105a80;
       font-weight: 500;
     }
@@ -44,14 +46,14 @@
     
     .icon {
       font-size: 2rem;
-      color: #1c3f60;
+      color: #105a80;
       margin-bottom: 1rem;
     }
     
     .learn-more {
       display: inline-block;
       margin-top: 1rem;
-      color: #4CAF50;
+      background-color: linear-gradient(#105a80, goldenrod);
       text-decoration: underline;
       font-weight: 600;
       list-style: none;

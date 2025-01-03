@@ -39,7 +39,7 @@
 
 #introduction ul li svg {
   margin-right: 10px;
-  color: #4caf50; 
+  color: #1c3f60;; 
 }
 
 @media (max-width: 768px) {
@@ -139,8 +139,10 @@
 }
 
 
+
+
 .buy-now, .whatsapp-btn {
-  background-color: #045216;
+  background-color: #1c3f60;
   color: #fff;
   font-size: 1rem;
   padding: 10px 20px;
@@ -193,6 +195,11 @@
 
 @media (max-width: 768px) {
 
+  #introduction {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
   #services h2 {
     margin-bottom: 20px;
     font-size: 1.8rem;
@@ -203,11 +210,9 @@
   }
   .services-card {
     width: 45%; 
-   
-    
   }
 
-  .servicess-container {
+  .services-container {
     justify-content: center;
   }
 

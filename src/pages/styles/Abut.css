@@ -36,7 +36,7 @@
   }
   
   .about-content p {
-    font-size: 1.1em;
+    font-size: 1.2rem;
     line-height: 1.6;
     color: #555;
   }
@@ -48,7 +48,7 @@
   }
   
   .services-list li {
-    font-size: 1.1em;
+    font-size: 1.2rem;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -147,6 +147,11 @@
     color: #1c3f60;
 }
 
+.vision-section p, .mission-section p {
+  font-size: 1.2rem;
+  text-align: start;
+}
+
 /* Core Values List Styling */
 .core-values-list {
     display: grid;
@@ -162,12 +167,13 @@
     background: #ffffffa9;
     padding: 15px;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: #333;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     list-style: none;
+    text-align: start;
 }
 
 /* Large Screen (Desktop) */

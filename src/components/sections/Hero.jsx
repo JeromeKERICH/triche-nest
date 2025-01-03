@@ -5,13 +5,13 @@ const heroData = [
   {
     image: "/assets/3.png",
     title: 'Transform Your Vision into a Stunning, High-Performing Website',
-    ctaText: 'Register Here',
+    ctaText: 'Start Here',
     link: "https://forms.gle/2Axp24PvvbVYMDAU9",
   },
   {
     image: "/assets/appo.png",
     title: 'Engage, Inspire, and Convert with Powerful Content That Speaks to Your Audience',
-    ctaText: 'Book A Session',
+    ctaText: 'Book A Free Session',
     link: "https://calendly.com/trichenest/30min", 
   },
   {
@@ -28,7 +28,7 @@ const Hero = () => {
   useEffect(() => {
     const slideInterval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % heroData.length);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(slideInterval);
   }, []);
 

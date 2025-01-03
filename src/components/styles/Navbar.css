@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 10%;
+    padding: 0.6rem 10%;
     background: linear-gradient(135deg, #1c3f60, #2e273a);
     color: #fff;
     z-index: 10;
@@ -35,7 +35,7 @@
   
   .social-media span {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #4CAF50;
   }
   
@@ -146,7 +146,7 @@
   
   @media (max-width: 850px) {
     .navbar {
-        padding: 8px 15px;
+        padding: 3px 10px;
     }
     .mobile-navbar {
       display: flex;  

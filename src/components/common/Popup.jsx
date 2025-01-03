@@ -1,17 +1,28 @@
-import React, { useState } from 'react';
-import '../styles/Popup.css';
-import { redirect } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import "../styles/Popup.css";
 
 const Popup = () => {
-  const [isPopupVisible, setPopupVisible] = useState(true);
+  const [isPopupVisible, setPopupVisible] = useState(false);
+
+  useEffect(() => {
+    const isFirstVisit = !localStorage.getItem("popupDisplayed");
+    if (isFirstVisit) {
+      setPopupVisible(true);
+      // Hide popup after 4 seconds
+      setTimeout(() => {
+        setPopupVisible(false);
+        localStorage.setItem("popupDisplayed", "true");
+      }, 4000);
+    }
+  }, []);
 
   const services = [
     { name: "Web Development", redirect: "/web" },
     { name: "Web Quality Assurance", redirect: "/quality" },
-    { name: "SEO", redirect: "/seo"},
-    { name: "Content Writing", redirect: "/content"},
+    { name: "SEO", redirect: "/seo" },
+    { name: "Content Writing", redirect: "/content" },
     { name: "Career Development", redirect: "/career" },
-    { name: "Mental Health", redirect: "/mental"},
+    { name: "Mental Health", redirect: "/mental" },
   ];
 
   const handleExplore = () => {
@@ -27,9 +38,9 @@ const Popup = () => {
       {isPopupVisible && (
         <div className="popup-overlay">
           <div className="popup-container">
-          <h1>Welcome to Triche Nest</h1>
+            <h1>Welcome to Triche Nest</h1>
             <h2>What are you looking for?</h2>
-            <p>Choose a service or explore our site for more details!</p>
+            <p>Get instant access to our services with just one click!</p>
             <div className="services-list">
               {services.map((service) => (
                 <button
@@ -47,7 +58,15 @@ const Popup = () => {
           </div>
         </div>
       )}
-      
+
+      {/* Floating Button */}
+      <button
+        className="floating-btn"
+        onClick={() => setPopupVisible(true)}
+        aria-label="EazNav Navigation Button"
+      >
+        EazNav
+      </button>
     </div>
   );
 };

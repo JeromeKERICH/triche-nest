@@ -11,21 +11,21 @@ const BlogPage = () => {
       title: "The Future of Artificial Intelligence",
       category: "Technology",
       excerpt: "Explore how AI is reshaping industries and daily life...",
-      image: "https://via.placeholder.com/400x200",
+      image: "assets/ai.jpg",
     },
     {
       id: 2,
       title: "Top 10 Tips for a Healthy Lifestyle",
       category: "Health",
       excerpt: "Learn simple ways to improve your health in 2024...",
-      image: "https://via.placeholder.com/400x200",
+      image: "assets/healthy.jpg",
     },
     {
       id: 3,
       title: "Starting a Business in 2025",
       category: "Business",
       excerpt: "Key strategies to launch and grow your startup...",
-      image: "https://via.placeholder.com/400x200",
+      image: "assets/2025.jpg",
     },
   ];
 

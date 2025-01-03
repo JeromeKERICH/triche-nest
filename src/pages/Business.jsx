@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './styles/Business.css';
+import CTA from "../components/common/CTA";
 
 const Business = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    businessType: "",
-    queryType: "Concern",
-    message: "",
-  });
-
   const [greeting, setGreeting] = useState("");
-  const [businessResources, setBusinessResources] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const hour = new Date().getHours();
@@ -25,55 +16,9 @@ const Business = () => {
     }
   }, []);
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    if (e.target.name === "businessType") {
-      loadResources(e.target.value);
-    }
-  };
-
-  const loadResources = (businessType) => {
-    const resources = {
-      "Tech": ["Tech Innovations Webinar", "Digital Transformation Strategies"],
-      "Retail": ["E-commerce Growth Strategies", "Customer Experience Best Practices"],
-      "Finance": ["Financial Management eBook", "Market Expansion Tactics"]
-    };
-    setBusinessResources(resources[businessType] || []);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    try {
-      const response = await fetch('http://localhost:5000/send-email', {  
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        alert('Message sent successfully!');
-        setFormData({ name: "", email: "", businessType: "", queryType: "Concern", message: "" });
-      } else {
-        alert('Failed to send message. Try again later.');
-      }
-    } catch (error) {
-      alert('An error occurred: ' + error.message);
-    }
-  };
-
-  const handleVipJoin = () => {
-    setIsModalOpen((prevState) => !prevState); 
-  };
-
-  const closeModal = (e) => {
-    if (e.target.classList.contains("modal")) {
-      setIsModalOpen(false); 
-    }
-  };
-
   return (
     <div>
+     
       <section className="heros" id="homes">
         <div className="heros-content">
           <h1>{greeting}, Business Leader!</h1>
@@ -81,119 +26,88 @@ const Business = () => {
         </div>
       </section>
 
-      <section id="infos" className="infos-section">
-        <h2>Tailored Solutions for Your Business</h2>
-        <p>Whether you're looking for guidance on scaling, optimizing processes, or overcoming specific challenges, we have the tools and resources to support your business.</p>
-        
-        <a href="https://chat.whatsapp.com/Dh3atk77f3k4n4QcJ6ZIHi" className="vip-button">
-          Join Exclusive Business Connect
-        </a>
+
+     
+      <section className="features-section">
+        <h2>Why Choose Our Approach?</h2>
+        <div className="features-list">
+          <div className="features-item">
+            <i className="fas fa-clock"></i>
+            <h3>Save Time and Effort</h3>
+            <p>Our automation tools streamline your workflow, letting you focus on what you do best.</p>
+          </div>
+          <div className="features-item">
+            <i className="fas fa-users"></i>
+            <h3>Reach More Clients</h3>
+            <p>Mobile-first designs ensure your business looks great on any device, increasing engagement.</p>
+          </div>
+          <div className="features-item">
+            <i className="fas fa-chart-line"></i>
+            <h3>Empower Your Growth</h3>
+            <p>Personalized training gives you the tools and confidence to scale your digital presence.</p>
+          </div>
+          <div className="features-item">
+            <i className="fas fa-thumbs-up"></i>
+            <h3>Proven Results</h3>
+            <p>We deliver systems that attract high-paying clients and double your leads in just 3 months.</p>
+          </div>
+        </div>
       </section>
 
-      <section id="forms" className="forms-section">
-        <h2>Let Us Help Your Business</h2>
-        <form onSubmit={handleSubmit} className="forms-container">
-          <div>
-            <label>Name</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label>Business Type</label>
-            <select
-              name="businessType"
-              value={formData.businessType}
-              onChange={handleChange}
-            >
-              <option value="Tech">Tech</option>
-              <option value="Retail">Retail</option>
-              <option value="Finance">Finance</option>
-            </select>
-          </div>
-          <div>
-            <label>Query Type</label>
-            <select
-              name="queryType"
-              value={formData.queryType}
-              onChange={handleChange}
-            >
-              <option value="Concern">Concern</option>
-              <option value="Learning">Learning</option>
-              <option value="Help">Help</option>
-            </select>
-          </div>
-          <div>
-            <label>Message</label>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
-          <button type="submit">Submit</button>
-        </form>
+      <CTA/>
 
-        <section id="community" className="community-section">
-          <h2>Join Our Exclusive Business Network</h2>
-          <p>Join a community of like-minded business leaders. Share insights, network, and grow your business with access to exclusive content and events.</p>
-          <button className="vip-button" onClick={handleVipJoin}>
-            {isModalOpen ? "Close" : "Become a VIP Member"}
-          </button>
-        </section>
+      
 
-        {isModalOpen && (
-          <div className="modal" onClick={closeModal}>
-            <div className="modals-content" onClick={(e) => e.stopPropagation()}>
-              <h2>Choose Your VIP Package</h2>
-              <div className="packages">
-                <div className="package">
-                  <h3>Basic</h3>
-                  <p>Renewed Yearly</p>
-                  <p>$20 / year</p>
-                  <button className="package-btn">Select</button>
-                </div>
-                <div className="package">
-                  <h3>Premium</h3>
-                  <p>Renewed Yearly</p>
-                  <p>$50 / year</p>
-                  <button className="package-btn">Select</button>
-                </div>
-                <div className="package">
-                  <h3>Gold</h3>
-                  <p>Lifetime</p>
-                  <p>$100 (One-time payment)</p>
-                  <button className="package-btn">Select</button>
-                </div>
+      <section className="case-studies-section">
+        <h2 className="section-title">Case Studies: Real Results</h2>
+        <div className="case-study-container">
+          <div className="case-study-item">
+            <div className="case-study-info">
+              <h3>Highland Training Centre</h3>
+              <p>HTC saw a 50% increase in leads within the first 2 months with our mobile-first website design and automated systems.</p>
+              <div className="impact-box">
+                <p><strong>Impact:</strong> +50% leads in 3 months</p>
               </div>
             </div>
+            <img src="assets/htc.jpg" alt="HTC" className="case-study-img" />
           </div>
-        )}
 
-        <h3>Tailored Resources for Your Business</h3>
-        <ul>
-          {businessResources.length > 0 ? businessResources.map((resource, index) => (
-            <li key={index}>{resource}</li>
-          )) : <p>Choose a business type to see relevant resources.</p>}
-        </ul>
+          <div className="case-study-item">
+            <div className="case-study-info">
+              <h3>Abthan Technologies Growth</h3>
+              <p>After implementing our website design and automation tools, Abthan doubled its conversion rate within 1 months.</p>
+              <div className="impact-box">
+                <p><strong>Impact:</strong> +100% conversion rate in 2 months</p>
+              </div>
+            </div>
+            <img src="assets/abtstat.jpg" alt="Abthan Tech" className="case-study-img" />
+          </div>
+        </div>
       </section>
+
+      <section className="download-section">
+          <div className="download-container">
+            <div className="download-text">
+              <h2>Download Full Case Study Report</h2>
+              <p>
+                Gain detailed insights into our transformative work. Learn how we
+                helped businesses achieve their goals and how we can do the same
+                for you.
+              </p>
+              <a href="assets/case.png" download className="download-btn">
+                Download Now
+              </a>
+            </div>
+            <div className="download-image">
+              <img
+                src="assets/case.png"
+                alt="Case Study Preview"
+              />
+            </div>
+          </div>
+        </section>
+
+
       
     </div>
   );

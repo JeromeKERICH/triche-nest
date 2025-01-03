@@ -13,7 +13,7 @@ const services = [
 const Services = () => {
   return (
     <section className="services">
-      <h2>Unmatched Solutions</h2>
+      <h2>Services We Offer</h2>
       <div className="service-list">
         {services.map((service) => (
           <div key={service.id} className="service">

@@ -14,10 +14,10 @@ const testimonialsData = [
     image: "assets/kirui.jpeg",
   },
   {
-    name: "Michael Kings",
+    name: "Miriam Maru",
     role: "Freelancer",
-    feedback: "Career development coaching helped me land my dream job. Amazing experience!",
-    image: "https://via.placeholder.com/100",
+    feedback: "Partnering with Emmanuel to design my website was seamless and amazing! He captured my vision perfectly, delivering a sleek, user-friendly, and visually striking design that truly represents my brand.",
+    image: "assets/MAR.jpg",
   },
 ];
 
