@@ -216,7 +216,7 @@ const App = () => {
             
           </div>
           <div className="image-section">
-            <img src="assets/appo.png" alt="Web Design" />
+            <img src="assets/we.jpg" alt="Web Design" />
           </div>
         </div>
       </section>
