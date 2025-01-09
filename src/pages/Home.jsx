@@ -7,6 +7,7 @@ import Projects from '../components/sections/Projects'
 import Reason from '../components/sections/Reason';
 import Service from '../components/sections/Service'
 import Testimonials from '../components/sections/Testimonials';
+import Newsletter from '../components/sections/Newsletter';
 
 const Home = () => {
   return (
@@ -17,10 +18,9 @@ const Home = () => {
       <CTA/>
       <Reason/>
       <Projects />
-      
-      
       <FAQ/>
       <Testimonials/>
+      <Newsletter/>
   
       
     </div>

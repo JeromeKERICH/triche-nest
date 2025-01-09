@@ -12,6 +12,7 @@ import BlogPage from '../pages/Blogpage';
 import Contact from '../pages/Contact';
 import Business from '../pages/Business';
 import PrivacyPolicy from '../pages/Policy';
+import LearnMore from '../pages/Learn';
 
 
 
@@ -30,7 +31,7 @@ const AppRouter = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/business" element={<Business />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
-    
+      <Route path="/learn-more" element={<LearnMore/>} />
       
     </Routes>
   );

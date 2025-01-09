@@ -51,13 +51,14 @@
     font-size: 1.2rem;
     margin-bottom: 10px;
     display: flex;
+    color: #333;
     align-items: center;
     justify-content: left;
   }
   
   .services-list li svg {
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 1.2rem;
     color: #1c3f60;
   }
   
@@ -205,7 +206,7 @@
     .mission-section,
     .core-values-section {
         text-align: center;
-        padding: 15px;
+        padding: 20px;
     }
 
     .vision-section h2,
@@ -224,7 +225,7 @@
 
 .founder-section {
   width: 100%;
-  padding: 40px 20px;
+  padding: 5% 20px;
   background-color: #f4f4f4;
   text-align: center;
 }
@@ -261,15 +262,6 @@
   position: relative;
 }
 
-.close-button {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  color: #444;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
 
 .video-container video {
   max-width: 100%;
@@ -308,13 +300,6 @@
   transition: color 0.3s ease;
 }
 
-.social-links a:hover {
-  color: #1da1f2; /* Twitter Blue */
-}
-
-.social-links a:nth-child(2):hover {
-  color: #3b5998; /* Facebook Blue */
-}
 
 
 @media (max-width: 768px) {

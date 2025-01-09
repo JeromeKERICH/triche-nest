@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.6rem 10%;
+    padding: 0 10%;
     background: linear-gradient(135deg, #1c3f60, #2e273a);
     color: #fff;
     z-index: 10;
@@ -22,7 +22,7 @@
   }
   
   .logo img {
-    width: 100px; 
+    width: 80px; 
     height: auto; 
     display: block; 
   }
@@ -41,7 +41,7 @@
   
   .social-media a {
     color: #ffffffa9;
-    font-size: 1.5rem;
+    font-size: 1rem;
     transition: color 0.3s ease;
   }
   
@@ -97,7 +97,7 @@
 
   @media(max-width: 853px) and (max-height: 1280px) {
     .navbar {
-      padding: 8px 15px;
+      padding: 6px 15px;
   }
   .mobile-navbar {
     display: flex;  
@@ -146,7 +146,7 @@
   
   @media (max-width: 850px) {
     .navbar {
-        padding: 3px 10px;
+        padding: 0px 15px;
     }
     .mobile-navbar {
       display: flex;  
@@ -172,7 +172,7 @@
     }
   
     .mobile-navbar .nav-item i {
-      font-size: 1.5rem; 
+      font-size: 1rem; 
       margin-bottom: 0.2rem; 
     }
   

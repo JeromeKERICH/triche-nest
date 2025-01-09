@@ -5,7 +5,7 @@ const heroData = [
   {
     image: "/assets/3.png",
     title: 'Transform Your Vision into a Stunning, High-Performing Website',
-    ctaText: 'Start Here',
+    ctaText: 'Register Now',
     link: "https://forms.gle/2Axp24PvvbVYMDAU9",
   },
   {

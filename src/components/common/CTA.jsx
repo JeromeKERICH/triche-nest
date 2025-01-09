@@ -25,7 +25,7 @@ const CTA = () => {
         <h1>Take Your Business to New Heights</h1>
         <p>Join Triche Nest today and discover innovative solutions to grow, manage, and scale your business seamlessly.</p>
         <div className="cta-buttons">
-          <a href="/businesspage" className="btn-primary">Learn More</a>
+          <a href="/learn-more" className="btn-primary">Learn More</a>
           <button 
             className="btn-secondary"
             onClick={handleGetStartedClick}

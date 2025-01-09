@@ -64,7 +64,7 @@ const Popup = () => {
         onClick={() => setPopupVisible(true)}
         aria-label="EazNav Navigation Button"
       >
-        EazNav
+      EazNav
       </button>
     </div>
   );

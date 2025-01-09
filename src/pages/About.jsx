@@ -83,9 +83,7 @@ const About = () => {
                     <div className="founder-image">
                     {isVideoPlaying ? (
                         <div className="video-container">
-                        <button className="close-button" onClick={handleCloseVideo}>
-                            ✖
-                        </button>
+                        
                         <video controls autoPlay>
                             <source src="/path-to-video.mp4" type="video/mp4" />
                             Your browser does not support the video tag.

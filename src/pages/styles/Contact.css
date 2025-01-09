@@ -144,6 +144,10 @@
     text-align: center;
   }
 
+  .contact-details p {
+    font-size: 1rem;
+  }
+
   .contact-form h2 {
     text-align: center;
   }

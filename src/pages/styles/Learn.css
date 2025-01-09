@@ -1,0 +1,162 @@
+
+  
+  .Learn-container {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    margin: 0 auto;
+  }
+
+  
+  /* Section Styles */
+  .her-header {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .her-header h2 {
+    font-size: 2.5rem;
+    color: #1c3f60;
+  }
+  
+
+  .her-header p {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  .story-section {
+    margin: 40px 0;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+  }
+
+  .story-section h2 {
+    font-size: 2rem;
+    color: #1c3f60;
+    margin-bottom: 10px;
+  }
+
+
+
+  
+  .story-btn {
+    padding: 10px 20px;
+    background-color: #1c3f60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  
+  
+  /* Services Area */
+  .services-area {
+    margin: 40px 0;
+  }
+
+  .services-area h3 {
+    font-size: 1.8rem;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    color: #1c3f60;
+    margin-bottom: 20px;
+  }
+  
+  .services-spac {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .services-space {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .services-space h4 {
+    color: #105a80;
+    margin-bottom: 10px;
+  }
+  
+  .services-space p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* About and Approach Section */
+  .about-learn, .approach-learn, .future-learn {
+    margin: 40px 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-learn h3,
+  .approach-learn h3,
+  .future-learn h3 {
+    color: #105a80;
+  }
+  
+  .about-learn p,
+  .approach-learn p,
+  .future-learn p {
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  /* Responsive Styles */
+
+  @media(max-width: 1024px) {
+    .Learn-container {
+        padding-top: 10%;
+    }
+  }
+  @media(max-width: 768px) {
+
+    .Learn-container {
+        padding-top: 15%;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .her-header h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .her-header p {
+        font-size: 1rem;
+        text-align: start;
+    }
+
+    .story-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .story-section p {
+        text-align: start;
+        font-size: 1rem;
+    }
+
+
+    .services-spac {
+      flex-direction: column;
+    }
+  
+    .services-space {
+      flex: 1 1 100%;
+    }
+  }
+  

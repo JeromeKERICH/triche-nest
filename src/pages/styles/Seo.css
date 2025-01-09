@@ -38,6 +38,7 @@
 
   .seo-details h3 {
     font-size: 1.6rem;
+    margin-top: 20px;
 
   }
   
@@ -201,6 +202,10 @@
     .seo-details {
         padding-left: 4%;
         padding-right: 4%;
+    }
+
+    .seo-details ul li {
+      font-size: 1rem;
     }
 
     .seo-form label {
