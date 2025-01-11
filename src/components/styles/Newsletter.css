@@ -1,69 +1,92 @@
-/* src/components/MailchimpForm.css */
-
-.mailchimp-form {
-  max-width: 900px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  padding: 20px;
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.form {
+/* Center the form box */
+#mc_embed_shell {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9; 
+  box-sizing: border-box;
 }
 
-.form label {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-.form input {
+/* Form container styles */
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
   width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  max-width: 900px; 
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: auto 0; 
 }
 
-.form button {
-  padding: 12px 20px;
+/* Form heading */
+#mc_embed_signup h2 {
+  font-size: 2.5rem;
+  color: #1c3f60;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Required field note */
+#mc_embed_signup .indicates-required {
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Input group */
+#mc_embed_signup .mc-field-group {
+  margin-bottom: 15px;
+}
+
+/* Input label */
+#mc_embed_signup label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* Email input */
+#mc_embed_signup input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Submit button */
+#mc_embed_signup input[type="submit"] {
   background-color: #1c3f60;
-  color: white;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
   border: none;
   border-radius: 4px;
-  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+/* Referral badge styling */
+#mc_embed_signup .refferal_badge {
+  width: 220px;
+  height: 40px;
+  display: block;
+  margin: 10px auto 0;
 }
 
 
-
-.thank-you-message {
-  text-align: center;
-  font-size: 1.5rem;
-  color: #28a745;
-}
-
-/* Responsive styles */
 @media (max-width: 768px) {
-  .mailchimp-form {
-    padding: 15px;
+  #mc_embed_signup h2 {
+    font-size: 1.5rem;
   }
 
-  .form label {
-    font-size: 1rem;
-  }
-
-  .form input {
-    font-size: 0.9rem;
-  }
-
-  .form button {
+  #mc_embed_signup label  {
     font-size: 1rem;
   }
 }

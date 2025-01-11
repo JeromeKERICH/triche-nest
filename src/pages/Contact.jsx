@@ -1,6 +1,7 @@
-import React from 'react';
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import './styles/Contact.css'; 
-import { FaShoppingCart, FaPaintBrush, FaFileAlt, FaBriefcase, FaUniversity, FaHeart, FaNewspaper, FaMobileAlt, FaWhatsapp } from 'react-icons/fa'; // Import icons
+import {FaWhatsapp } from 'react-icons/fa'; // Import icons
 
 const Contact = () => {
   
@@ -8,6 +9,56 @@ const Contact = () => {
   const handleWhatsapp = () => {
     window.open('https://wa.me/254788120422', '_blank'); 
   };
+
+    const [formData, setFormData] = useState({
+      name: "",
+      email: "",
+      message: "",
+    });
+  
+    const handleChange = (e) => {
+      const { id, value } = e.target;
+      setFormData({ ...formData, [id]: value });
+    };
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+  
+      if (!formData.name || !formData.email || !formData.message) {
+        alert("Please fill in all the fields.");
+        return;
+      }
+  
+      emailjs
+        .send(
+          "service_q3m6g6n", // Replace with your EmailJS service ID
+          "template_41u8a1r", // Replace with your EmailJS template ID
+          {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+          },
+          "Nzo2xPey3Sn2O9Cd9" // Replace with your EmailJS public key
+        )
+        .then(
+          (response) => {
+            alert("Message sent successfully!");
+            console.log("SUCCESS!", response.status, response.text);
+  
+            // Clear the form after submission
+            setFormData({
+              name: "",
+              email: "",
+              message: "",
+            });
+          },
+          (error) => {
+            alert("Failed to send the message. Please try again.");
+            console.error("FAILED...", error);
+          }
+        );
+    };
+  
 
   return (
     <div className="contact-page">
@@ -26,6 +77,9 @@ const Contact = () => {
             <li>
               <strong>Email:</strong> <a href="mailto:info@trichenest.com">info@trichenest.com</a>
             </li>
+            <li>
+              <strong>Book Free Discovery Call:</strong> <a href="https://calendly.com/trichenest/30min">Reserve Now</a>
+            </li>
             
           </ul>
         </div>
@@ -33,20 +87,43 @@ const Contact = () => {
         {/*Contact Form */}
         <div className="contact-form">
           <h2>Contact Form</h2>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Your Name</label>
-              <input type="text" id="name" placeholder="Enter your name" />
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
             </div>
             <div className="form-group">
               <label htmlFor="email">Your Email</label>
-              <input type="email" id="email" placeholder="Enter your email" />
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
             </div>
             <div className="form-group">
               <label htmlFor="message">Message</label>
-              <textarea id="message" rows="4" placeholder="Write your message"></textarea>
+              <textarea
+                id="message"
+                rows="4"
+                placeholder="Write your message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
             </div>
-            <button type="submit" className="submit-button">Send Message</button>
+            <button type="submit" className="submit-button">
+              Send Message
+            </button>
           </form>
         </div>
 

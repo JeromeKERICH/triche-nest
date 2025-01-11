@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import emailjs from "@emailjs/browser";
 import { FaLock, FaCheckCircle, FaWhatsapp, FaMobileAlt, FaGlobe, FaShoppingCart, FaBook, FaUsers, FaGamepad, FaArrowRight } from "react-icons/fa";
 import './styles/Web.css';
 
@@ -33,7 +34,7 @@ const App = () => {
       Static: [
         {
           title: "Personal Blog",
-          price: "200",
+          price: "15,000",
           features: [
             { icon: <FaGlobe />, text: "Custom Domain" },
             { icon: <FaLock />, text: "SSL Certificates" },
@@ -45,7 +46,7 @@ const App = () => {
         },
         {
           title: "Portfolio",
-          price: "200",
+          price: "25,000",
           features: [
             { icon: <FaUsers />, text: "Showcase Your Work" },
             { icon: <FaLock />, text: "SSL Certificates" },
@@ -57,7 +58,7 @@ const App = () => {
         },
         {
           title: "Business Brochure",
-          price: "200",
+          price: "30,000",
           features: [
             { icon: <FaGlobe />, text: "Professional Branding" },
             { icon: <FaLock />, text: "Secure Hosting" },
@@ -71,7 +72,7 @@ const App = () => {
       Dynamic: [
         {
           title: "E-commerce",
-          price: "200",
+          price: "50,000",
           features: [
             { icon: <FaShoppingCart />, text: "Integrated Payment Gateway" },
             { icon: <FaLock />, text: "Secure Checkout" },
@@ -83,7 +84,7 @@ const App = () => {
         },
         {
           title: "Social Media",
-          price: "200",
+          price: "60,000",
           features: [
             { icon: <FaUsers />, text: "User Registration" },
             { icon: <FaLock />, text: "Secure User Data" },
@@ -95,7 +96,7 @@ const App = () => {
         },
         {
           title: "News Portal",
-          price: "200",
+          price: "45,000",
           features: [
             { icon: <FaBook />, text: "Dynamic Content Updates" },
             { icon: <FaLock />, text: "SSL Certificates" },
@@ -109,7 +110,7 @@ const App = () => {
       Specialized: [
         {
           title: "Educational",
-          price: "200",
+          price: "70,000",
           features: [
             { icon: <FaBook />, text: "Course Management System" },
             { icon: <FaLock />, text: "SSL Certificates" },
@@ -121,7 +122,7 @@ const App = () => {
         },
         {
           title: "Gaming",
-          price: "200",
+          price: "95,000",
           features: [
             { icon: <FaGamepad />, text: "Multiplayer Features" },
             { icon: <FaLock />, text: "High-Performance Servers" },
@@ -133,7 +134,7 @@ const App = () => {
         },
         {
           title: "Government",
-          price: "200",
+          price: "120,000",
           features: [
             { icon: <FaGlobe />, text: "Public Resources" },
             { icon: <FaLock />, text: "Enhanced Security" },
@@ -148,34 +149,70 @@ const App = () => {
   
     const [activeCategory, setActiveCategory] = useState("Static");
 
-  useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+      useEffect(() => {
+          window.scrollTo(0, 0);
+        }, []);
 
+        const [formData, setFormData] = useState({
+          fullName: "",
+          email: "",
+          phone: "",
+          desiredDomain: "",
+          plan: "Starter Plan (KSH 15,000)",
+          websiteDetails: "",
+        });
+      
+        const handleChange = (e) => {
+          const { name, value } = e.target;
+          setFormData({ ...formData, [name]: value });
+        };
+      
+        const handleSubmit = (e) => {
+          e.preventDefault();
+      
+          // Validation (Optional)
+          if (!formData.fullName || !formData.email || !formData.phone || !formData.plan) {
+            alert("Please fill in all required fields.");
+            return;
+          }
+      
+          // Send email using EmailJS
+          emailjs
+            .send(
+              "service_h8ruvmq", // Replace with your EmailJS Service ID
+              "template_vafda6i", // Replace with your EmailJS Template ID
+              {
+                fullName: formData.fullName,
+                email: formData.email,
+                phone: formData.phone,
+                desiredDomain: formData.desiredDomain || "Not specified",
+                plan: formData.plan,
+                websiteDetails: formData.websiteDetails || "No details provided",
+              },
+              "TSF5LVKpWju8AP9No" // Replace with your EmailJS Public Key
+            )
+            .then(
+              (response) => {
+                alert("Your application has been submitted successfully!");
+                console.log("SUCCESS!", response.status, response.text);
+      
+                // Clear the form after submission
+                setFormData({
+                  fullName: "",
+                  email: "",
+                  phone: "",
+                  desiredDomain: "",
+                  plan: "Starter Plan (KSH 15,000)",
+                  websiteDetails: "",
+                });
+              },
+              (error) => {
+                alert("Failed to send the application. Please try again.");
+                console.error("FAILED...", error);
+              }
+            );
+        };
 
-  
-    const [formData, setFormData] = useState({
-      fullName: '',
-      email: '',
-      phone: '',
-      desiredDomain: '',
-      plan: 'Starter Plan ($36)',
-      websiteDetails: ''
-    });
-  
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: value
-      }));
-    };
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      console.log(formData);
-    };
-    
   return (
     <div className="app">
       <main>
@@ -211,7 +248,7 @@ const App = () => {
             </ul>
 
             <div className='button'>
-              <button className='btn'>Order your website</button>
+              <button className='btn'><a href="#websiteForm">Order your website</a></button>
             </div>
             
           </div>
@@ -258,7 +295,7 @@ const App = () => {
             style={{ backgroundColor: `hsl(${index * 60}, 70%, 85%)` }} 
           >
             <h3>{website.title}</h3>
-            <div className="price-tag">${website.price}</div>
+            <div className="price-tag">KSH{website.price}</div>
             <ul>
               {website.features.map((feature, idx) => (
                 <li key={idx}>
@@ -274,85 +311,93 @@ const App = () => {
       </div>
     </section>
 
-    <section className="form">
-        <h1>Website Application Form</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="fullName">Full Name *</label>
-            <input
-              type="text"
-              id="fullName"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
-              required
-            />
-          </div>
+    <section id="websiteForm" className="form">
+      <h1>Website Application Form</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="fullName">Full Name *</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-          <div className="form-group">
-            <label htmlFor="email">Email *</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
+        <div className="form-group">
+          <label htmlFor="email">Email *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-          <div className="form-group">
-            <label htmlFor="phone">Phone *</label>
-            <input
-              type="text"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-            />
-          </div>
+        <div className="form-group">
+          <label htmlFor="phone">Phone *</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-          <div className="form-group">
-            <label htmlFor="desiredDomain">Desired Domain</label>
-            <input
-              type="text"
-              id="desiredDomain"
-              name="desiredDomain"
-              value={formData.desiredDomain}
-              onChange={handleChange}
-              placeholder="Ex: www.businesswebsolutions.in"
-            />
-          </div>
+        <div className="form-group">
+          <label htmlFor="desiredDomain">Desired Domain</label>
+          <input
+            type="text"
+            id="desiredDomain"
+            name="desiredDomain"
+            value={formData.desiredDomain}
+            onChange={handleChange}
+            placeholder="Ex: www.trichenest.com"
+          />
+        </div>
 
-          <div className="form-group">
-            <label htmlFor="plan">Select your Plan *</label>
-            <select
-              name="plan"
-              id="plan"
-              value={formData.plan}
-              onChange={handleChange}
-            >
-              <option value="Starter Plan ($36)">Starter Plan ($36)</option>
-              <option value="Advanced Plan ($72)">Advanced Plan ($72)</option>
-              <option value="Premium Plan ($120)">Premium Plan ($120)</option>
-            </select>
-          </div>
+        <div className="form-group">
+          <label htmlFor="plan">Select your Plan *</label>
+          <select
+            name="plan"
+            id="plan"
+            value={formData.plan}
+            onChange={handleChange}
+          >
+            <option value="Starter Plan (KSH 15,000)">
+              Starter Plan (KSH 15,000)
+            </option>
+            <option value="Advanced Plan (KSH 25,000)">
+              Advanced Plan (KSH 25,000)
+            </option>
+            <option value="Premium Plan (KSH 30,000)">
+              Premium Plan (KSH 30,000)
+            </option>
+          </select>
+        </div>
 
-          <div className="form-group">
-            <label htmlFor="websiteDetails">Share some details about the website you want</label>
-            <textarea
-              id="websiteDetails"
-              name="websiteDetails"
-              value={formData.websiteDetails}
-              onChange={handleChange}
-              maxLength="250"
-              placeholder="0 of 250 max words"
-            />
-          </div>
+        <div className="form-group">
+          <label htmlFor="websiteDetails">
+            Share some details about the website you want
+          </label>
+          <textarea
+            id="websiteDetails"
+            name="websiteDetails"
+            value={formData.websiteDetails}
+            onChange={handleChange}
+            maxLength="250"
+            placeholder="0 of 250 max words"
+          />
+        </div>
 
-          <button type="submit">Build Me a Website</button>
-        </form>
+        <button type="submit">Build Me a Website</button>
+      </form>
     </section>
 
         {/* Services Section */}

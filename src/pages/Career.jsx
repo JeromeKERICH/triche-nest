@@ -1,13 +1,12 @@
-import React, { useState, useRef, useEffect  } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from "@emailjs/browser";
 import './styles/Career.css';
-
-
 
 const services = [
   { 
     id: 'resumeReview', 
     title: 'Resume Review', 
-    price: 50, 
+    price: 2500, 
     description: 'Get expert feedback on your resume and improve your chances of landing a job.',
     features: [
       'Comprehensive review of your resume layout.',
@@ -20,7 +19,7 @@ const services = [
   { 
     id: 'coverLetterWriting', 
     title: 'Cover Letter Writing', 
-    price: 60, 
+    price: 1500, 
     description: 'A well-crafted cover letter to make your application stand out.',
     features: [
       'Tailored cover letter for each job application.',
@@ -33,7 +32,7 @@ const services = [
   { 
     id: 'interviewCoaching', 
     title: 'Interview Coaching', 
-    price: 80, 
+    price: 3000, 
     description: 'Prepare for interviews with mock sessions and professional guidance.',
     features: [
       'Mock interview sessions with a professional coach.',
@@ -46,7 +45,7 @@ const services = [
   { 
     id: 'careerConsulting', 
     title: 'Career Consulting', 
-    price: 100, 
+    price: 2000, 
     description: 'Personalized career advice to help you grow in your chosen field.',
     features: [
       'Identifying your strengths and weaknesses.',
@@ -59,45 +58,48 @@ const services = [
 ];
 
 const CareerDevelopmentPage = () => {
-  const [resumeFile, setResumeFile] = useState(null);
-  const [selectedService, setSelectedService] = useState([]);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const fileInputRef = useRef(null);
+  const [resume, setResume] = useState(null);
+  const [selectedServices, setSelectedServices] = useState([]);
+  const fileInputRef = useRef();
 
   const handleResumeChange = (e) => {
-    setResumeFile(e.target.files[0]);
+    setResume(e.target.files[0]);
   };
 
   const handleServiceSelection = (e) => {
-    const { value, checked } = e.target;
-    if (checked) {
-      setSelectedService((prev) => [...prev, value]);
-    } else {
-      setSelectedService((prev) => prev.filter((service) => service !== value));
-    }
+    const service = e.target.value;
+    setSelectedServices(prevState => 
+      prevState.includes(service) 
+      ? prevState.filter(item => item !== service) 
+      : [...prevState, service]
+    );
   };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (resume) {
+      // Create a FormData object to send the resume as an attachment
+      const formData = new FormData();
+      formData.append('file', resume);
+      formData.append('name', name);
+      formData.append('email', email);
 
-    
-    alert(`Thank you for your submission, ${name}!`);
-
-    
-    setName('');
-    setEmail('');
-    setResumeFile(null);
-    setSelectedService([]);
-
-    
-    if (fileInputRef.current) {
-      fileInputRef.current.value = '';
+      // Use emailjs to send the form data along with the resume file
+      emailjs
+        .sendForm('service_h8ruvmq', 'template_2nuz0o5', formData, 'TSF5LVKpWju8AP9No')
+        .then(
+          (result) => {
+            console.log('Email sent successfully:', result.text);
+            alert('Your resume has been submitted!');
+          },
+          (error) => {
+            console.error('Error sending email:', error.text);
+            alert('There was an error submitting your resume.');
+          }
+        );
     }
   };
 
@@ -119,7 +121,7 @@ const CareerDevelopmentPage = () => {
                 </li>
               ))}
             </ul>
-            <p><strong>Price: ${service.price.toFixed(2)}</strong></p>
+            <p><strong>Price: KSH {service.price.toFixed(2)}</strong></p>
             <input 
               type="checkbox" 
               value={service.title} 
@@ -130,7 +132,6 @@ const CareerDevelopmentPage = () => {
       </div>
 
       <div className="form-container">
-      
         <div className="resume-upload-section">
           <h3>Submit Your Resume</h3>
           <form onSubmit={handleSubmit}>
@@ -170,13 +171,13 @@ const CareerDevelopmentPage = () => {
         <div className="checkout-section">
           <h3>Checkout</h3>
           <div className="checkout-details">
-            {selectedService.length > 0 ? (
-              selectedService.map((service, index) => {
+            {selectedServices.length > 0 ? (
+              selectedServices.map((service, index) => {
                 const matchedService = services.find((s) => s.title === service);
                 return (
                   <div key={index} className="checkout-item">
                     <h3>{service}</h3>
-                    <p>${matchedService?.price?.toFixed(2) || "0.00"}</p>
+                    <p>KSH {matchedService?.price?.toFixed(2) || "0.00"}</p>
                   </div>
                 );
               })
