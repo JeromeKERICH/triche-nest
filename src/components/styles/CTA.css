@@ -160,6 +160,31 @@
 }
 
 
+.loading-indicator {
+  text-align: center;
+  font-size: 18px;
+  color: #4caf50; /* Green */
+}
+
+.submit-message {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.submit-message p {
+  font-weight: bold;
+}
+
+.submit-message p.success {
+  color: #4caf50;
+}
+
+.submit-message p.error {
+  color: red;
+}
+
+
 
 /* Responsive design for the form */
 @media (max-width: 768px) {

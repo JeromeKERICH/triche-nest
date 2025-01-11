@@ -62,6 +62,8 @@ const CareerDevelopmentPage = () => {
   const [email, setEmail] = useState('');
   const [resume, setResume] = useState(null);
   const [selectedServices, setSelectedServices] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(null); // To track submission status
   const fileInputRef = useRef();
 
   const handleResumeChange = (e) => {
@@ -80,6 +82,9 @@ const CareerDevelopmentPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    setLoading(true);
+    setSubmitSuccess(null); // Reset submission status before submitting
+
     if (resume) {
       // Create a FormData object to send the resume as an attachment
       const formData = new FormData();
@@ -93,11 +98,13 @@ const CareerDevelopmentPage = () => {
         .then(
           (result) => {
             console.log('Email sent successfully:', result.text);
-            alert('Your resume has been submitted!');
+            setSubmitSuccess('Your resume has been submitted successfully!');
+            setLoading(false);
           },
           (error) => {
             console.error('Error sending email:', error.text);
-            alert('There was an error submitting your resume.');
+            setSubmitSuccess('There was an error submitting your resume.');
+            setLoading(false);
           }
         );
     }
@@ -163,8 +170,17 @@ const CareerDevelopmentPage = () => {
               accept=".pdf,.doc,.docx"
             />
 
-            <button type="submit">Submit Resume</button>
+            <button type="submit" disabled={loading}>Submit Resume</button>
           </form>
+
+          {loading && (
+            <div className="loading">
+              <p>Please wait...</p>
+              <div className="spinner"></div>
+            </div>
+          )}
+
+          {submitSuccess && <p>{submitSuccess}</p>}
         </div>
 
         {/* Checkout Section */}

@@ -9,26 +9,28 @@ const CTA = () => {
     businessType: "",
     services: "",
     goals: "",
-    whatsappNumber: "", // Added WhatsApp number
+    whatsappNumber: "", 
   });
+  const [isLoading, setIsLoading] = useState(false); 
+  const [submitMessage, setSubmitMessage] = useState(""); 
 
   const handleGetStartedClick = () => {
-    setShowForm(!showForm); // Toggle the form visibility
+    setShowForm(!showForm); 
   };
 
   const handleCloseForm = () => {
-    setShowForm(false); // Hide the form
+    setShowForm(false); 
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target; // Ensure `name` is used to dynamically update state
+    const { name, value } = e.target; 
     setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check that all required fields are filled (can also validate individually)
+    
     if (
       !formData.businessName ||
       !formData.businessType ||
@@ -40,19 +42,23 @@ const CTA = () => {
       return;
     }
 
+    setIsLoading(true); 
+    setSubmitMessage(""); 
+
     // Send the form data using EmailJS
     emailjs
       .send(
-        "service_q3m6g6n", // Replace with your EmailJS service ID
-        "template_zn92oou", // Replace with your EmailJS template ID
+        "service_q3m6g6n", 
+        "template_zn92oou", 
         {
-          ...formData, // Use form data directly
+          ...formData, 
         },
-        "Nzo2xPey3Sn2O9Cd9" // Replace with your EmailJS public key
+        "Nzo2xPey3Sn2O9Cd9" 
       )
       .then(
         (response) => {
-          alert("Form submitted successfully!");
+          setIsLoading(false); 
+          setSubmitMessage("Form submitted successfully!"); 
           console.log("SUCCESS!", response.status, response.text);
 
           // Clear the form after submission
@@ -64,10 +70,11 @@ const CTA = () => {
             whatsappNumber: "",
           });
 
-          handleCloseForm(); // Close the form after submission
+          handleCloseForm(); 
         },
         (error) => {
-          alert("Failed to send form. Please try again.");
+          setIsLoading(false); 
+          setSubmitMessage("Failed to submit the form. Please try again.");
           console.log("FAILED...", error);
         }
       );
@@ -167,6 +174,19 @@ const CTA = () => {
                 </button>
               </div>
             </form>
+            
+            {isLoading && (
+              <div className="loading-indicator">
+                <p>Please wait...</p>
+                {/* You can replace this with an actual spinner */}
+              </div>
+            )}
+
+            {submitMessage && (
+              <div className="submit-message">
+                <p>{submitMessage}</p>
+              </div>
+            )}
           </div>
         )}
       </div>
